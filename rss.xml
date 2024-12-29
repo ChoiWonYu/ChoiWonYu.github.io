@@ -1,4 +1,276 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Wonyu]]></title><description><![CDATA[Hello :) I'm Wonyu]]></description><link>https://choiwonyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 28 Dec 2024 15:15:08 GMT</lastBuildDate><item><title><![CDATA[프로세스와 스레드]]></title><description><![CDATA[…]]></description><link>https://choiwonyu.github.io/프로세스와 스레드/</link><guid isPermaLink="false">https://choiwonyu.github.io/프로세스와 스레드/</guid><pubDate>Sun, 29 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;프로세스란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EB%9E%80&quot; aria-label=&quot;프로세스란 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;프로세스란?&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Wonyu]]></title><description><![CDATA[Hello :) I'm Wonyu]]></description><link>https://choiwonyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 29 Dec 2024 06:14:53 GMT</lastBuildDate><item><title><![CDATA[CPU 스케줄링]]></title><description><![CDATA[개요 CPU 스케줄러는 여러 프로세스의 상황을 고려해 CPU와 시스템 자원을 어떻게 배분할지 결정한다. 즉, 프로세스의 모든 상태 변화를 조정하는 것이다. 종류 CPU…]]></description><link>https://choiwonyu.github.io/CPU 스케줄링/</link><guid isPermaLink="false">https://choiwonyu.github.io/CPU 스케줄링/</guid><pubDate>Sun, 29 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;개요&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;개요 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;개요&lt;/h2&gt;
+&lt;p&gt;CPU 스케줄러는 여러 프로세스의 상황을 고려해 CPU와 시스템 자원을 어떻게 배분할지 결정한다. 즉, &lt;strong&gt;프로세스의 모든 상태 변화를 조정&lt;/strong&gt;하는 것이다.&lt;/p&gt;
+&lt;h3 id=&quot;종류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A2%85%EB%A5%98&quot; aria-label=&quot;종류 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;종류&lt;/h3&gt;
+&lt;p&gt;CPU 스케줄러는 프로세스 관리의 범주를 나누어 스케줄링한다. 규모에 따라 장기 스케줄러, 중기 스케줄러, 단기 스케줄러로 구분된다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;장기 스케줄러: 시스템 내 전체 작업 수를 조절한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;현대 OS에선 사용 빈도가 낮다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;중기 스케줄러: 시스템 내 부하를 조절하기 위해 과부하 전 프로세스를 보류 상태로 보내거나 보류 상태의 프로세스를 활성화한다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;단기 스케줄러: 어떤 프로세스에 CPU를 할당할 것인지 결정한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU 스케줄링에서 가장 중요한 역할 담당&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;목적&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AA%A9%EC%A0%81&quot; aria-label=&quot;목적 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;목적&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;공평성&lt;/strong&gt;: 모든 프로세스가 자원을 공평하게 배정받아야 한다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;효율성&lt;/strong&gt;: 시스템 자원이 유휴 시간 없이 사용되도록 스케줄링 해야 한다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;안정성&lt;/strong&gt;: 우선순위를 사용해 중요 프로세스가 먼저 작동되도록 함으로써 시스템 자원을 점유하거나 파괴하려는 프로세스로부터 자원을 보호해야 한다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;확장성&lt;/strong&gt;: 프로세스가 증가해도 시스템이 안정적으로 작동하도록 해야 한다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;반응 시간 보장&lt;/strong&gt;: 시스템이 적절한 시간 안에 프로세스의 요구에 반응해야 한다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;무한 연기 방지&lt;/strong&gt;: 특정 프로세스의 작업이 무한하게 연기되어선 안 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;스케줄링-시-고려-사항&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8A%A4%EC%BC%80%EC%A4%84%EB%A7%81-%EC%8B%9C-%EA%B3%A0%EB%A0%A4-%EC%82%AC%ED%95%AD&quot; aria-label=&quot;스케줄링 시 고려 사항 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;스케줄링 시 고려 사항&lt;/h2&gt;
+&lt;p&gt;스케줄러가 어떤 프로세스에 우선적으로 CPU를 할당할지 결정할 때 고려해야할 사항이 있다.&lt;/p&gt;
+&lt;h3 id=&quot;선점형-스케줄러와-비선점형-스케줄러&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A0%EC%A0%90%ED%98%95-%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AC%EC%99%80-%EB%B9%84%EC%84%A0%EC%A0%90%ED%98%95-%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AC&quot; aria-label=&quot;선점형 스케줄러와 비선점형 스케줄러 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;선점형 스케줄러와 비선점형 스케줄러&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;구분&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;선점형 스케줄러&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;비선점형 스케줄러&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;작업 방식&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;실행 중인 프로세스가 끝나기 전에, 우선순위가 높은 프로세스가 CPU를 점유할 수 있다&lt;/td&gt;
+&lt;td&gt;실행 중인 프로세스가 끝날 때까지 CPU 점유를 유지하며, 다른 프로세스는 대기한다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;장점&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;- 응답 시간이 짧아 사용자 작업의 응답성이 향상된다&lt;br&gt;- 긴 작업을 대기시키고 짧은 작업을 우선 처리 가능하다&lt;br&gt;- 동적 우선순위 변경이 가능하다&lt;/td&gt;
+&lt;td&gt;- 구현이 단순하고, 컨텍스트 스위칭 비용이 적다&lt;br&gt;- CPU가 특정 작업에 집중할 수 있어 처리량(Throughput)이 증가한다&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;단점&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;- 잦은 컨텍스트 스위칭으로 CPU 오버헤드 발생한다&lt;/td&gt;
+&lt;td&gt;- 프로세스 간 공정성이 떨어질 수 있다&lt;br&gt;- 긴 작업이 완료되기 전까지 다른 작업이 계속 대기(컨보이 효과)할 가능성이 있다&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;사용 사례&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;- 시분할 방식 스케줄링에 사용된다&lt;/td&gt;
+&lt;td&gt;- 일괄 작업 방식 스케줄링에 사용된다&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;프로세스-우선순위&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84&quot; aria-label=&quot;프로세스 우선순위 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;프로세스 우선순위&lt;/h3&gt;
+&lt;p&gt;프로세스에 우선순위가 있다는 것은 중요도가 다르다는 것이다.
+프로세스는 크게 커널 프로세스와 일반 프로세스로 나뉘며, 커널 프로세스가 일반 프로세스보다 우선순위가 높다.&lt;/p&gt;
+&lt;p&gt;일반 프로세스도 중요도가 각각 다르기 때문에 우선순위가 다르다. 이 우선순위는 사용자가 조절이 가능하다. 하지만 특정 프로세스에 우선순위를 너무 높이면, 다른 프로세스 처리에 영향이 가기 때문에 유닉스에선 관리자에게만 해당 권한을 부여한다.&lt;/p&gt;
+&lt;h3 id=&quot;CPU-집중-프로세스와-IO-집중-프로세스&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#CPU-%EC%A7%91%EC%A4%91-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-IO-%EC%A7%91%EC%A4%91-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4&quot; aria-label=&quot;CPU 집중 프로세스와 IO 집중 프로세스 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;CPU 집중 프로세스와 I/O 집중 프로세스&lt;/h3&gt;
+&lt;p&gt;프로세스는 CPU를 사용해 작업하는 실행 상태 또는 I/O를 요청해 완료되기까지 기다리는 대기 상태에 있다. 이때 CPU를 할당받아 실행하는 작업을 CPU burst, I/O 작업을 I/O burst라고 한다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/a91023b0216803f39da172101c9585d5/60106/bound-process.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 71.17647058823529%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABg0lEQVR42o1Ti46cMAzk/3+wuqrLtfviGUICIZCQTGOvOG1b2K0lK8bIk7E9yZxzkFKibVsIIdjnecY7W5YFfd9jGAZ2iqdpQqaU4p9VVeF+vzOY1pqLYoz/AG05qhvHEZfLBXmeMyDlMmJHAJTYYgLfA4xPudvt9tVZWZZomoaZZiEEDug2YwzTruv6C3SP4fl8xul0AtWu68qn957/ZUcz6nuJbx/fMVqHfvIPNwuDUWtHlm23Pjv4BH6WHRptIY2Hsh6FnCC0wXPNLuCezS6gUgt8iCj7GbV2HLejTy3G1wz3TKUlCWXQJXZicCgS+K9a4+PHZ1pEA9F1PGtSyCHg1sK2JLKQcmt4OMVVVaIoClhreZa0lLeAm2D3pEM6JfEf6TT7mxnrKWkxzz/Rdy3gNIKViLNEmBq0TQWXJEKqfLsU0iC1QfORnYCq8vTGFIKpEW2Xzharur58kodLQXCAbRG9RRiuCPrKOWKJGP4P8E89pm9nmFmc1cOtQFyXlwx/A2eJR1ALjEZ6AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;bound process&apos; title=&apos;&apos; src=&apos;/static/a91023b0216803f39da172101c9585d5/ca1dc/bound-process.png&apos; srcset=&apos;/static/a91023b0216803f39da172101c9585d5/e7570/bound-process.png 170w,
+/static/a91023b0216803f39da172101c9585d5/f46e7/bound-process.png 340w,
+/static/a91023b0216803f39da172101c9585d5/ca1dc/bound-process.png 680w,
+/static/a91023b0216803f39da172101c9585d5/02d09/bound-process.png 1020w,
+/static/a91023b0216803f39da172101c9585d5/9d567/bound-process.png 1360w,
+/static/a91023b0216803f39da172101c9585d5/60106/bound-process.png 1522w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+프로세스는 위 작업 형태에 따라 &lt;strong&gt;CPU 집중 프로세스와 I/O 집중 프로세스&lt;/strong&gt;로 나눌 수 있다.
+CPU 집중 프로세스는 CPU burst가 많고, I/O 집중 프로세스는 I/O burst가 많다.&lt;/p&gt;
+&lt;p&gt;두 프로세스가 있다고 할 때 어떤 프로세스의 우선순위를 높이는 것이 효율적일까?
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/5267c7e666c42ffebbba0f9ea0043ac5/a1898/io-cpu-priority.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 43.529411764705884%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABRklEQVR42nVSa2+DMBDr//+P/dCKtvQBhJCQJ3i+22irdYtk3YEOY5+zS2VBqgRrXVaEEOC9h3NOe8E4jpjnWXtrLXLO+O/sxlBgQ0XvC1zIGIYefd/jcrkocdd1OBwOOJ/PuN1uaJoGxhgsy6JY11XxIpwLBJ3LiFkGNnwPphRxPB6VSJTe73ftp2nC4/HA9dqqiCehkETaDayF1heSVAHtLxxImT+0E8xo4fwMR+uOykOMsCSdnKeTmWopQAjlQ0H5hVyJ5zN0hq+0L2wEMvOaF1ckdKlSXVW7KWVMXLoZBt1fjIHWrNqWasyAme/fd/YRio9VdzgyGB+i7qhtW62n0wn7/V53JWj4LCGllFBrpepFSdYfKOHAdI1/hSKnlKJJC6kEsoUhyW91C+lD4fsONytS5a4JsVSBqNruZWQgspK/7uMXlKW8TuL1n9cAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;io cpu priority&apos; title=&apos;&apos; src=&apos;/static/5267c7e666c42ffebbba0f9ea0043ac5/ca1dc/io-cpu-priority.png&apos; srcset=&apos;/static/5267c7e666c42ffebbba0f9ea0043ac5/e7570/io-cpu-priority.png 170w,
+/static/5267c7e666c42ffebbba0f9ea0043ac5/f46e7/io-cpu-priority.png 340w,
+/static/5267c7e666c42ffebbba0f9ea0043ac5/ca1dc/io-cpu-priority.png 680w,
+/static/5267c7e666c42ffebbba0f9ea0043ac5/02d09/io-cpu-priority.png 1020w,
+/static/5267c7e666c42ffebbba0f9ea0043ac5/9d567/io-cpu-priority.png 1360w,
+/static/5267c7e666c42ffebbba0f9ea0043ac5/a1898/io-cpu-priority.png 1674w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+위에서 볼 수 있듯 &lt;strong&gt;I/O 집중 프로세스를 먼저 실행 상태로 옮기는 것이 효율적&lt;/strong&gt;이다. I/O 집중 프로세스가 CPU 집중 프로세스보다 실행 상태에 먼저 들어가는 경우를 &lt;strong&gt;사이클 훔치기&lt;/strong&gt; 라고 한다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;다중-큐&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8B%A4%EC%A4%91-%ED%81%90&quot; aria-label=&quot;다중 큐 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;다중 큐&lt;/h2&gt;
+&lt;h3 id=&quot;준비-상태의-다중-큐&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A4%80%EB%B9%84-%EC%83%81%ED%83%9C%EC%9D%98-%EB%8B%A4%EC%A4%91-%ED%81%90&quot; aria-label=&quot;준비 상태의 다중 큐 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;준비 상태의 다중 큐&lt;/h3&gt;
+&lt;p&gt;프로세스는 저마다 중요도가 다르며 중요도는 PCB에 표시된다. 스케줄러가 모든 프로세스의 PCB를 뒤져 우선순위가 높은 프로세스를 찾으려면 상당히 번거로울 것이다.&lt;/p&gt;
+&lt;p&gt;따라서 우선순위에 따라 여러 개의 큐를 만들어 프로세스를 분리한다. 이를 간단히 도식화하면 다음과 같다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/1fb9e443d2b021ecd619a27ba7f64554/cc6c5/pending-queue.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 43.529411764705884%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABKElEQVR42nWS2a6CUAxF+f+f48EnDGMUGWSQSQbRmtWkxuR6mzTtOafd3d3gyJe9Xi/puk6GYVAnxx6PhzRNo2di3/fynzlt2wp+v9+1sKoqbbzdbppjgHOu61ojoAz/CZimqTZmWSae58n1epXz+SxJkuigPM/FdV0FOp1OH6aw/gnII8z2fdciAGA0jqPmMAG4KApZlkVzQE2iP4Df+uE0McCGYM/nU6Zp+mhr98R5ntXpo9/Ztk0PJj46oScMTUPAYLauqw5ifQx5uKefDRjmXC4XfTCNACSiKTlgURRJWZbi+76guX2cMAw1D4JAMah1aKSYhziOlRUPMLFBh8NBdeOeM/XUHY9H3cZ0ZSsHfXDThA9ha9n/xkrGimY0w4jUsCrvyPcGfFuzqNKYBMYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;pending queue&apos; title=&apos;&apos; src=&apos;/static/1fb9e443d2b021ecd619a27ba7f64554/ca1dc/pending-queue.png&apos; srcset=&apos;/static/1fb9e443d2b021ecd619a27ba7f64554/e7570/pending-queue.png 170w,
+/static/1fb9e443d2b021ecd619a27ba7f64554/f46e7/pending-queue.png 340w,
+/static/1fb9e443d2b021ecd619a27ba7f64554/ca1dc/pending-queue.png 680w,
+/static/1fb9e443d2b021ecd619a27ba7f64554/02d09/pending-queue.png 1020w,
+/static/1fb9e443d2b021ecd619a27ba7f64554/9d567/pending-queue.png 1360w,
+/static/1fb9e443d2b021ecd619a27ba7f64554/cc6c5/pending-queue.png 1552w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;프로세스의 우선순위를 배정하는 방식은 고정 우선순위 방식과 변동 우선순위 방식이 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;고정 우선순위 방식&lt;/strong&gt;: 프로세스에 부여된 우선순위가 프로세스가 종료될 때까지 바뀌지 않는다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;장점: 구현이 쉽다.&lt;/li&gt;
+&lt;li&gt;단점: 시스템 변화에 대응하기 어려워 효율이 떨어진다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;변동 우선순위 방식&lt;/strong&gt;: 프로세스 생성 시 부여받은 우선순위가 작업 중간에 변한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;장점: 시스템 효율을 높인다.&lt;/li&gt;
+&lt;li&gt;단점: 구현이 어렵다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;대기-상태의-다중-큐&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8C%80%EA%B8%B0-%EC%83%81%ED%83%9C%EC%9D%98-%EB%8B%A4%EC%A4%91-%ED%81%90&quot; aria-label=&quot;대기 상태의 다중 큐 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;대기 상태의 다중 큐&lt;/h3&gt;
+&lt;p&gt;대기 상태는 입출력이 완료되기를 기다리는 프로세스가 모인 곳이다. 여기선 같은 I/O를 요구한 프로세스들끼리 모아놓는다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/738515b828881b5f40e36b58e989aa27/526f1/io-queue.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 45.294117647058826%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABI0lEQVR42nWR6aqDQAyFff9n819RVASlBde6172ayxeYUop3IJrJcnJyxpKfcxyHDMMgXdep7fuu8XEcpe97zc3zLP8d6zxPaZpG6rqWZVk+QDQTw3+/39K2rcZMnL5LQBj5vi+e50me5+q/Xi+J41iez6cCBEEgaZpKVVWSZZmC03cJyAcWsKQIMBiwIgDct21Tf5omNfKcK5bW94UCQL/1MkyQAzBy67pqjEHEuZuYasiFBD4NMIBRURTKEA3LstRVMcOQP7JQizHA4hVvt5vYti33+10cx1FmURRpMea6riRJovo9Hg8FQuswDHUAfcjGcH0U87KwREt81jNFDIAhMXwAIcIQNqLvw/BXVLM2GgJmNEQW2DCQRg5SUMsQQNHwD/5Ptj9jql1cAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;io queue&apos; title=&apos;&apos; src=&apos;/static/738515b828881b5f40e36b58e989aa27/ca1dc/io-queue.png&apos; srcset=&apos;/static/738515b828881b5f40e36b58e989aa27/e7570/io-queue.png 170w,
+/static/738515b828881b5f40e36b58e989aa27/f46e7/io-queue.png 340w,
+/static/738515b828881b5f40e36b58e989aa27/ca1dc/io-queue.png 680w,
+/static/738515b828881b5f40e36b58e989aa27/02d09/io-queue.png 1020w,
+/static/738515b828881b5f40e36b58e989aa27/9d567/io-queue.png 1360w,
+/static/738515b828881b5f40e36b58e989aa27/526f1/io-queue.png 1702w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+I/O 작업이 끝나고 인터럽트가 도착하면, 준비 상태가 된다. &lt;/p&gt;
+&lt;p&gt;준비 상태의 다장 큐는 한 번에 하나의 프로세스를 꺼내 CPU에게 할당하지만, 대기큐는 여러 개의
+PCB를 동시에 꺼내 준비 상태로 옮긴다. 이렇게 동시에 끝나는 &lt;strong&gt;인터럽트를 처리하기 위해 인터럽트 벡터라는 자료구조&lt;/strong&gt;를 사용한다.&lt;/p&gt;
+&lt;h2 id=&quot;스케줄링-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8A%A4%EC%BC%80%EC%A4%84%EB%A7%81-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;스케줄링 알고리즘 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;스케줄링 알고리즘&lt;/h2&gt;
+&lt;h3 id=&quot;스케줄링-알고리즘의-선택-기준&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8A%A4%EC%BC%80%EC%A4%84%EB%A7%81-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%98-%EC%84%A0%ED%83%9D-%EA%B8%B0%EC%A4%80&quot; aria-label=&quot;스케줄링 알고리즘의 선택 기준 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;스케줄링 알고리즘의 선택 기준&lt;/h3&gt;
+&lt;p&gt;어떤 스케줄링 알고리즘이 효율적인지 파악하려면 그 기준이 있어야 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CPU 사용률&lt;/strong&gt;: 전체 시스템의 동작 시간 중 CPU가 사용된 시간&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;처리량&lt;/strong&gt;: 단위 시간당 작업을 마친 프로세스의 수&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;대기 시간&lt;/strong&gt;: 작업을 요청한 프로세스가 대기하는 시간&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;응답 시간&lt;/strong&gt;: 프로세스 시작 후 첫 번째 출력 또는 응답이 나올 때까지 걸리는 시간&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;반환 시간&lt;/strong&gt;: 대기 시간 + 실행 시간&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;비선점형-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B9%84%EC%84%A0%EC%A0%90%ED%98%95-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;비선점형 알고리즘 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;비선점형 알고리즘&lt;/h3&gt;
+&lt;p&gt;프로세스가 CPU를 할당받으면 작업이 끝날 때까지 CPU를 놓지 않는다. 이 경우 효율이 떨어져 지금은 거의 사용되지 않는다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;FCFS (First Come, First Served)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;도착 순서대로 프로세스를 처리&lt;/li&gt;
+&lt;li&gt;장점: 구현이 간단&lt;/li&gt;
+&lt;li&gt;단점: 앞의 긴 작업으로 인해 뒤의 작업이 지연되는 &lt;strong&gt;컨보이 효과&lt;/strong&gt; 발생&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SJF (Shortest Job First)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;실행 시간이 가장 짧은 프로세스를 우선 처리&lt;/li&gt;
+&lt;li&gt;장점: 평균 대기 시간 최소화&lt;/li&gt;
+&lt;li&gt;단점: 우선순위에 밀려 작업이 계속 연기되는 기아 상태 발생 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;선점형-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A0%EC%A0%90%ED%98%95-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;선점형 알고리즘 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;선점형 알고리즘&lt;/h3&gt;
+&lt;p&gt;시분할 시스템을 고려하여 만들어진 알고리즘으로, 어떤 프로세스가 CPU를 할당받아 실행 중이라도 운영체제가 CPU를 빼앗을 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Round Robin (RR)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 프로세스에 동일한 타임 슬라이스를 할당
+-&gt; 우선순위가 적용되지 않음&lt;/li&gt;
+&lt;li&gt;장점: 공정성 보장, 짧은 응답 시간&lt;/li&gt;
+&lt;li&gt;단점: 타임 슬라이스가 적절하지 않으면 성능 저하&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SRTF (Shortest Remaining Time First)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SJF 스케줄링과 RR 스케줄링을 혼합한 방식&lt;/li&gt;
+&lt;li&gt;실행 중인 작업보다 남은 실행 시간이 짧은 작업이 도착하면 CPU를 빼앗김&lt;/li&gt;
+&lt;li&gt;장점: 평균 대기 시간 최소화&lt;/li&gt;
+&lt;li&gt;단점: 작업의 실행 시간을 예측하기 어려움&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Priority Scheduling (선점형)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;높은 우선순위의 작업이 도착하면 실행 중인 작업을 중단&lt;/li&gt;
+&lt;li&gt;장점: 중요한 작업을 빠르게 처리&lt;/li&gt;
+&lt;li&gt;단점: 기아 상태 발생 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;프로세스의 우선순위는 시스템의 효율성이 아닌 프로세스의 중요도를 기준으로 결정된다.&lt;/p&gt;
+&lt;h3 id=&quot;다단계-큐-스케줄링&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8B%A4%EB%8B%A8%EA%B3%84-%ED%81%90-%EC%8A%A4%EC%BC%80%EC%A4%84%EB%A7%81&quot; aria-label=&quot;다단계 큐 스케줄링 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;다단계 큐 스케줄링&lt;/h3&gt;
+&lt;p&gt;다단계 큐 스케줄링은 &lt;strong&gt;우선순위에 따라 준비 큐를 여러 개 사용&lt;/strong&gt;하는 방식이다.
+각각의 큐는 RR방식으로 운영되며, 상단 큐에 있는 모든 프로세스의 작업이 끝나야 다음 우선순위 큐의 작업이 시작된다.&lt;/p&gt;
+&lt;p&gt;장점&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;단순성&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;큐를 분리하여 처리하므로 구조가 명확하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;단점&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;유연성 부족&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;큐 간 이동이 불가능하므로, 동적으로 프로세스 우선순위를 변경하기 어렵다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;기아 상태(Starvation)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;우선순위가 낮은 큐에 있는 프로세스가 오랫동안 실행되지 않을 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;다단계-피드백-큐-스케줄링&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8B%A4%EB%8B%A8%EA%B3%84-%ED%94%BC%EB%93%9C%EB%B0%B1-%ED%81%90-%EC%8A%A4%EC%BC%80%EC%A4%84%EB%A7%81&quot; aria-label=&quot;다단계 피드백 큐 스케줄링 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;다단계 피드백 큐 스케줄링&lt;/h3&gt;
+&lt;p&gt;다단계 피드백 큐 스케줄링은 우선순위가 낮은 프로세스에 불리한 다단계 큐 스케줄링의 문제점을 보완한 방식이다. 이 방식에서 &lt;strong&gt;프로세스는 CPU를 사용한 후 원래 큐로 되돌아가지 않고 우선순위가 하나 낮은 큐의 끝으로 들어간다.&lt;/strong&gt; 때문에 우선순위가 낮은 프로세스의 실행이 연기되는 문제를 완화할 수 있다.&lt;/p&gt;
+&lt;p&gt;물론 프로세스의 우선순위가 낮아진다고 해도 커널 프로세스가 일반 프로세스의 큐에 삽입되지는 않는다.&lt;/p&gt;
+&lt;p&gt;또한 이 방식에서는 우선순위에 따라 타임 슬라이스의 크기가 다르다.
+프로세스의 우선순위가 낮아질 수록 타임 슬라이스의 크기가 커진다. 따라서 어렵게 얻은 CPU를 좀 더 오랫동안 사용할 수 있도록 한다.&lt;/p&gt;
+&lt;p&gt;장점&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;유연성&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;프로세스 특성에 따라 큐 간 이동이 가능하다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;기아 상태 방지&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;우선순위가 낮은 프로세스도 시간이 지나면 실행될 기회를 얻는다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;성능 최적화&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;짧은 작업은 빠르게 처리하고, 긴 작업은 낮은 우선순위 큐로 이동한다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;단점&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;복잡성 증가&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;큐 이동 조건과 알고리즘 설계가 복잡하다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;컨텍스트 스위칭 비용 증가&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;프로세스가 큐를 이동할 때 잦은 컨텍스트 스위칭 발생한다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[프로세스와 스레드]]></title><description><![CDATA[…]]></description><link>https://choiwonyu.github.io/프로세스와 스레드/</link><guid isPermaLink="false">https://choiwonyu.github.io/프로세스와 스레드/</guid><pubDate>Sat, 28 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;프로세스란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EB%9E%80&quot; aria-label=&quot;프로세스란 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;프로세스란?&lt;/h2&gt;
 &lt;h3 id=&quot;프로그램과-프로세스의-차이&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EA%B3%BC-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%9D%98-%EC%B0%A8%EC%9D%B4&quot; aria-label=&quot;프로그램과 프로세스의 차이 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;프로그램과 프로세스의 차이&lt;/h3&gt;
 &lt;p&gt;프로그램은 어떤 데이터를 사용하여 어떤 작업을 할지 그 절차를 정의한 것이다. 따라서 &lt;strong&gt;저장장치에 저장되는 정적인 상태&lt;/strong&gt;다.&lt;/p&gt;
 &lt;p&gt;반면 프로세스는 정의된 절차를 실행에 옮기는 것으로 &lt;strong&gt;메모리에 올라온 동적인 상태&lt;/strong&gt;다.
