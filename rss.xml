@@ -1,4 +1,273 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Wonyu]]></title><description><![CDATA[Hello :) I'm Wonyu]]></description><link>https://choiwonyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 29 Dec 2024 06:14:53 GMT</lastBuildDate><item><title><![CDATA[CPU 스케줄링]]></title><description><![CDATA[개요 CPU 스케줄러는 여러 프로세스의 상황을 고려해 CPU와 시스템 자원을 어떻게 배분할지 결정한다. 즉, 프로세스의 모든 상태 변화를 조정하는 것이다. 종류 CPU…]]></description><link>https://choiwonyu.github.io/CPU 스케줄링/</link><guid isPermaLink="false">https://choiwonyu.github.io/CPU 스케줄링/</guid><pubDate>Sun, 29 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;개요&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;개요 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;개요&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Wonyu]]></title><description><![CDATA[Hello :) I'm Wonyu]]></description><link>https://choiwonyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 03 Jan 2025 09:51:50 GMT</lastBuildDate><item><title><![CDATA[프로세스 동기화]]></title><description><![CDATA[…]]></description><link>https://choiwonyu.github.io/프로세스 동기화/</link><guid isPermaLink="false">https://choiwonyu.github.io/프로세스 동기화/</guid><pubDate>Fri, 03 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;프로세스-간-통신&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EA%B0%84-%ED%86%B5%EC%8B%A0&quot; aria-label=&quot;프로세스 간 통신 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;프로세스 간 통신&lt;/h2&gt;
+&lt;p&gt;프로세스 혹은 스레드는 독립적으로 실행된다.
+한 프로세스 내 스레드끼리는 같은 메모리 영역을 공유하기 때문에 어렵지 않지만 프로세스 간 통신은 다르다. 서로 다른 프로세스는 메모리 영역이 다르기 때문에 공유된 메모리를 통해 통신하는 것이 쉽지 않다. 운영체제는 &lt;strong&gt;프로세스 간 통신 방법을 제공하는데 이를 IPC(Inter Process Communication)&lt;/strong&gt; 라고 한다.&lt;/p&gt;
+&lt;h3 id=&quot;대표적인-프로세스-간-통신-종류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8C%80%ED%91%9C%EC%A0%81%EC%9D%B8-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EA%B0%84-%ED%86%B5%EC%8B%A0-%EC%A2%85%EB%A5%98&quot; aria-label=&quot;대표적인 프로세스 간 통신 종류 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;대표적인 프로세스 간 통신 종류&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;공유 메모리나 공유 파일을 이용한 통신&lt;/strong&gt;: 일정한 메모리 영역이나 파일을 공유하고 이를 통해 데이터를 주고 받는다. 데이터를 주고 받는 방법을 프로세스끼리 결정해야 하기 때문에 가장 원시적인 방법이다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;파이프를 이용한 통신&lt;/strong&gt;: 하나의 컴퓨터 내 프로세스 간 통신에 많이 사용하는 수단이다. 파이프는 프로세스 간 통신을 위해 &lt;strong&gt;운영체제가 제공하는 통신 기법&lt;/strong&gt;이다. 보통 fork()로 만들어진 부모-자식 간 통신에 사용된다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;소켓을 이용한 통신&lt;/strong&gt;: &lt;strong&gt;네트워크로 연결된 컴퓨터에서 데이터를 주고받기 위한 통신 기법&lt;/strong&gt;이다. 파이프와 비교했을 때 초기화할 내용도 많고 시스템 자원도 많이 사용하기 때문에 같은 컴퓨터 내 통신에선 비효율적이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;통신-방향에-따른-분류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%86%B5%EC%8B%A0-%EB%B0%A9%ED%96%A5%EC%97%90-%EB%94%B0%EB%A5%B8-%EB%B6%84%EB%A5%98&quot; aria-label=&quot;통신 방향에 따른 분류 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;통신 방향에 따른 분류&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;양방향 통신&lt;/strong&gt;: 데이터를 양쪽 방향으로 동시에 전송할 수 있는 구조
+ex) 소켓 이용 통신, 전화&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;반양방향 통신&lt;/strong&gt;: 데이터를 양쪽 방향으로 전송 가능하지만, 동시 전송은 불가능한 구조
+ex) 무전기&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;단방향 통신&lt;/strong&gt;: 한쪽 방향으로만 데이터를 전송할 수 있는 구조
+ex) 파이프 이용 통신&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;통신-구현-방식에-따른-분류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%86%B5%EC%8B%A0-%EA%B5%AC%ED%98%84-%EB%B0%A9%EC%8B%9D%EC%97%90-%EB%94%B0%EB%A5%B8-%EB%B6%84%EB%A5%98&quot; aria-label=&quot;통신 구현 방식에 따른 분류 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;통신 구현 방식에 따른 분류&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;공유 메모리를 사용하는 통신 방식의 가장 큰 문제는 &lt;strong&gt;상대방이 데이터를 언제 보낼지 받는 쪽에서 모른다는 것&lt;/strong&gt;이다. 따라서 데이터를 받는 쪽에서 반복적으로 공유 메모리를 점검하는 수밖에 없다.
+이렇게 &lt;strong&gt;수시로 점검하며 기다리는 상태를 busy waiting&lt;/strong&gt;이라고 한다.
+busy waiting은 시스템 자원 낭비가 크다. 이를 해결하기 위해 데이터가 도착했음을 알려주는 &lt;strong&gt;동기화&lt;/strong&gt;를 사용한다. &lt;/p&gt;
+&lt;p&gt;프로세스 간 통신은 &lt;strong&gt;동기화 기능 여부&lt;/strong&gt;에 따라 대기가 있는 통신과 없는 통신으로 구분된다.
+대기가 있는 통신(blocking communication)을 동기화 통신(synchronous communication), 대기가 없는 통신(non-blocking communication)을 비동기화 통신(asynchronous communication)이라고 한다.&lt;/p&gt;
+&lt;p&gt;파이프를 이용한 통신과 소켓을 이용한 통신은 대기가 있는 통신이므로 바쁜 대기를 사용하지 않고도 통신이 가능하다.&lt;/p&gt;
+&lt;h3 id=&quot;파이프를-이용한-통신&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8C%8C%EC%9D%B4%ED%94%84%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%ED%86%B5%EC%8B%A0&quot; aria-label=&quot;파이프를 이용한 통신 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;파이프를 이용한 통신&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/bac00439514ebbc08d1cc51a0ee1864e/3e79e/pipe.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 28.82352941176471%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAvklEQVR42pWRRw7FMAhEff/rZZV1ipTee+HnjeQs/i5IFngGBrCdPXbft13XZV+Nmn3f7TiOF3PLsljf9zbPs/y2bUoYx1EYfNu28tzP85QQ8TAMtq6r6oglWNe1dV33gmVZSiyKIsuyTCcMQ6uqyoqiUC55SZLIg9EQHRo5gGmaBCKKANPQGS6OYwuCwPI8F5emqdZEuGkaTUpMvSakEAACkGQ6sRrr+5X8+ry3f3cwP4z/A+dJBL6YF/6//wBUJtJm5ZuZlAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;pipe&apos; title=&apos;&apos; src=&apos;/static/bac00439514ebbc08d1cc51a0ee1864e/ca1dc/pipe.png&apos; srcset=&apos;/static/bac00439514ebbc08d1cc51a0ee1864e/e7570/pipe.png 170w,
+/static/bac00439514ebbc08d1cc51a0ee1864e/f46e7/pipe.png 340w,
+/static/bac00439514ebbc08d1cc51a0ee1864e/ca1dc/pipe.png 680w,
+/static/bac00439514ebbc08d1cc51a0ee1864e/02d09/pipe.png 1020w,
+/static/bac00439514ebbc08d1cc51a0ee1864e/9d567/pipe.png 1360w,
+/static/bac00439514ebbc08d1cc51a0ee1864e/3e79e/pipe.png 1550w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+만약 프로세스 B가 파이프1에 대해 읽기 연산을 수행했는데 프로세스 A가 파이프 1에 대해 쓰기 작업 중이라면, 프로세스 B는 대기 상태가 된다. 이러한 대기 상태는 프로세스 A의 쓰기 작업이 끝나는 순간 자동으로 풀려 동기화가 이뤄진다. 따라서 &lt;strong&gt;프로세스 B는 busy waiting를 하지 않아도 된다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;위처럼 파이프 통신 방식은 단방향 통신이기 때문에 &lt;strong&gt;양방향 통신을 하기 위해선 2개의 파이프가 필요&lt;/strong&gt;하다.&lt;/p&gt;
+&lt;h3 id=&quot;소켓을-이용한-통신&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%86%8C%EC%BC%93%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%ED%86%B5%EC%8B%A0&quot; aria-label=&quot;소켓을 이용한 통신 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;소켓을 이용한 통신&lt;/h3&gt;
+&lt;p&gt;서버 쪽 웹 데몬(HTTPD) 포트에 여러 클라이언트가 요청을 보냈다고 해보자. 만약 소켓을 사용하지 않는다면 한 클라이언트가 포트를 장악하고 나머지 클라이언트들은 하염없이 기다려야 한다. &lt;strong&gt;하나의 포트에 여러 클라이언트를 연결하려면 소켓이 필요&lt;/strong&gt;하다. 클라이언트들은 포트에 연결된 멀티 소켓에 하나씩 연결된다.&lt;/p&gt;
+&lt;p&gt;네트워킹 상황에서 통신할 때는 연결 프로시저 호출이나 소켓을 이용한다. 원격 프로시저 호출은 다른 컴퓨터에 있는 함수를 호출하는 것을 말한다. 이는 일반적으로 소켓으로 구현된다.&lt;/p&gt;
+&lt;p&gt;소켓을 이용한 통신에서는 소켓 1개만 사용해도 양방향 통신이 가능하다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;공유-자원과-임계구역&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B3%B5%EC%9C%A0-%EC%9E%90%EC%9B%90%EA%B3%BC-%EC%9E%84%EA%B3%84%EA%B5%AC%EC%97%AD&quot; aria-label=&quot;공유 자원과 임계구역 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;공유 자원과 임계구역&lt;/h2&gt;
+&lt;h3 id=&quot;공유-자원&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B3%B5%EC%9C%A0-%EC%9E%90%EC%9B%90&quot; aria-label=&quot;공유 자원 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;공유 자원&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;정의&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;여러 프로세스나 스레드가 동시에 접근하거나 사용할 수 있는 자원&lt;/strong&gt;
+ex) 메모리, 파일, 데이터베이스, 프린터 등
+&lt;strong&gt;문제점&lt;/strong&gt;:
+여러 프로세스 또는 스레드가 동시에 공유 자원에 접근하면 &lt;strong&gt;데이터 충돌, 불일치, 손상&lt;/strong&gt; 등의 문제가 발생할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;임계구역&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%84%EA%B3%84%EA%B5%AC%EC%97%AD&quot; aria-label=&quot;임계구역 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;임계구역&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;정의&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;공유 자원에 접근하는 &lt;strong&gt;코드 영역&lt;/strong&gt;으로, &lt;strong&gt;하나의 프로세스나 스레드만이 진입 가능&lt;/strong&gt;해야 한다.&lt;/li&gt;
+&lt;li&gt;임계 구역은 공유 자원을 안전하게 사용하기 위해 &lt;strong&gt;동기화 기법&lt;/strong&gt;을 필요로 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;경쟁-조건race-condition&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B2%BD%EC%9F%81-%EC%A1%B0%EA%B1%B4race-condition&quot; aria-label=&quot;경쟁 조건race condition permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;경쟁 조건(race condition)&lt;/h3&gt;
+&lt;p&gt;여러 프로세스나 스레드가 &lt;strong&gt;동시에 공유 자원에 접근&lt;/strong&gt;하면서, 실행 결과가 접근 순서에 따라 달라지는 상태&lt;/p&gt;
+&lt;h3 id=&quot;생산자-소비자-문제&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%83%9D%EC%82%B0%EC%9E%90-%EC%86%8C%EB%B9%84%EC%9E%90-%EB%AC%B8%EC%A0%9C&quot; aria-label=&quot;생산자 소비자 문제 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;생산자-소비자 문제&lt;/h3&gt;
+&lt;p&gt;생산자-소비자 문제는 Race condition의 전통적인 예시다. 생산자는 물건의 수를 증가시키고, 소비자는 물건의 수를 감소시킨다. 만약 생산자 코드와 소비자 코드가 동시에 실행될 경우 문제가 발생한다. 현재 총합(sum)이 3이라고 해보자.&lt;/p&gt;
+&lt;p&gt;생산자 코드 먼저 실행&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;생산자 sum = 4
+소비자 sum = 2
+결과 sum = 2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;소비자 코드 먼저 실행&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;소비자 sum = 2
+생산자 sum = 4
+결과 sum = 4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;임계구역-문제-해결-조건&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%84%EA%B3%84%EA%B5%AC%EC%97%AD-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EC%A1%B0%EA%B1%B4&quot; aria-label=&quot;임계구역 문제 해결 조건 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;임계구역 문제 해결 조건&lt;/h3&gt;
+&lt;p&gt;임계구역 문제를 해결하는 데 있어 가장 중요한 조건은 다음과 같다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;상호 배제(mutual exclusion)&lt;/strong&gt;: 한 번에 하나의 프로세스만 임계 구역에 진입할 수 있도록 보장
+&lt;strong&gt;한정 대기(bounded waiting)&lt;/strong&gt;: 어떤 프로세스도 임계구역에 진입하지 못해 무한 대기하지 않아야 함
+&lt;strong&gt;진행의 융통성(progress flexibility)&lt;/strong&gt;: 한 프로세스가 다른 프로세스의 진행을 방해해서는 안 됨&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;임계구역-문제-해결-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%84%EA%B3%84%EA%B5%AC%EC%97%AD-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;임계구역 문제 해결 방법 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;임계구역 문제 해결 방법&lt;/h2&gt;
+&lt;h3 id=&quot;문제-예시&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B8%EC%A0%9C-%EC%98%88%EC%8B%9C&quot; aria-label=&quot;문제 예시 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;문제 예시&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;동시 진입 상황&lt;/strong&gt;: 상호 배제 조건이 충족되지 않아 두 프로세스 이상이 임계구역에 접근&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;한정 대기 문제&lt;/strong&gt;: 락을 풀지 못해 작업이 진행되지 못하는 Deadlock 발생&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;진행의 융통성 문제&lt;/strong&gt;: 한 프로세스의 진행이 다른 프로세스로 인해 방해받는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;세마포어&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%B8%EB%A7%88%ED%8F%AC%EC%96%B4&quot; aria-label=&quot;세마포어 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;세마포어&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;공유 자원의 접근을 제어하기 위한 동기화 도구&lt;/strong&gt;로 자원을 사용할 수 있는 상태를 나타내는 정수 값을 유지하며, 프로세스나 스레드가 자원에 접근할 때 값을 변경하여 동기화를 구현한다&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;구성&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;정수 값&lt;/strong&gt; (&lt;code class=&quot;language-text&quot;&gt;S&lt;/code&gt;):&lt;/li&gt;
+&lt;li&gt;자원의 상태를 나타낸다&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;초기 값&lt;/strong&gt;은 사용할 수 있는 자원의 개수로 설정된다&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;두 가지 기본 연산&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;wait()&lt;/strong&gt; (또는 &lt;code class=&quot;language-text&quot;&gt;P()&lt;/code&gt;): 자원을 요청&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;자원을 사용할 수 있으면 값을 감소시키고, 사용 권한을 부여&lt;/li&gt;
+&lt;li&gt;자원을 사용할 수 없으면 대기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;signal()&lt;/strong&gt; (또는 &lt;code class=&quot;language-text&quot;&gt;V()&lt;/code&gt;): 자원을 해제&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;자원의 사용이 끝났음을 알리고, 값을 증가시킴&lt;/li&gt;
+&lt;li&gt;대기 중인 프로세스가 있으면, 자원 사용 권한 부여
+&lt;strong&gt;wait() 연산&lt;/strong&gt;
+자원을 요청하며 다음과 같이 작동한다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;세마포어 값 &lt;code class=&quot;language-text&quot;&gt;S&lt;/code&gt;가 1 이상이면:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;S&lt;/code&gt;를 1 감소시킨다&lt;/li&gt;
+&lt;li&gt;요청 프로세스는 자원을 사용한다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;세마포어 값 &lt;code class=&quot;language-text&quot;&gt;S&lt;/code&gt;가 0이면:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;요청 프로세스는 &lt;strong&gt;대기 큐&lt;/strong&gt;에 들어가며, 자원 사용 대기
+&lt;strong&gt;signal() 연산&lt;/strong&gt;
+자원을 해제하며 다음과 같이 작동합니다:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;세마포어 값 &lt;code class=&quot;language-text&quot;&gt;S&lt;/code&gt;가 대기 중인 프로세스가 없다면:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;S&lt;/code&gt;를 1 증가시킨다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;세마포어 값 &lt;code class=&quot;language-text&quot;&gt;S&lt;/code&gt;가 대기 중인 프로세스가 있다면:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;대기 중인 프로세스 하나를 깨워 자원을 사용하게 한다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;다음은 2개의 공유 자원에 대해 3개의 프로세스가 작업하는 상황을 나타낸다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/c0004d798aeb74df6c3a07602461c121/309ad/semaphore.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 82.94117647058825%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAACPklEQVR42p1UW2/aMBjl/7/sQjVtD6vWaVrf1ql73KSijWlSoeqqTiAgXAqEkEASk4SYxI7PbDfhslF2+STLjhMfn/N950sJv0SWZWCMIU1TvXZdF7ZtIwxDcM71UPtCCOyL0vaDAvE8D6Zpotfrod/vo9VqodFo6NkwDL03mUzg+74G3gtY3BZFkWakGCpG6lmF7TjI5DfqnbpQsVSgisBBhkmSwJGHlUTLsjRT0xzDHA5gjkcYDO40Q7U/m80eZqhZ5kyzfKzXbAUez+VMUWRN5O8P5pClCThL9RAiw//GGnDk+OhYBG3LR0iTnY9EPv4aMOUZ3nVSvG5mOP7BcTlh9xaSsjjjWh7nG6vcz2KvdA0YM4G3t0uUK3d4XBmjOkr0ASarOZVFIkEIV1aX5VUVf2JI0wynLY6jbx6O6ktUx0wfMwOOM4PjvAecGwwLyvUhsgjg+UTbyXZmu4CKMqUUtdESX4YrXPRjdOwQ4ClurBWeVB08rQxR/urICxgSiRmTOrzeMczmS1DnTMpmG0BlUkII4mWIZRQgIB7c+QwLyeLaSvHsMkD5s4nnVxG6bgI/Yrg1p7joGPjU7qIuPbrtx9K+PBR5Vozedzg+9IWWTHLJlcEK5RrFi+sUr26oLKr4vfW2K1isVQvOJVsi+5bSeF2M6jCRxRvh0cc2Tr4vsMoBxUMMsdURSk7xdykAaxbDibTYm6ayG5NuEIclH7pAhR9EaI/n6E4Jpl6wydG/Aq6BM65bNdP/Rr5jm58fJx9aLHz98AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;semaphore&apos; title=&apos;&apos; src=&apos;/static/c0004d798aeb74df6c3a07602461c121/ca1dc/semaphore.png&apos; srcset=&apos;/static/c0004d798aeb74df6c3a07602461c121/e7570/semaphore.png 170w,
+/static/c0004d798aeb74df6c3a07602461c121/f46e7/semaphore.png 340w,
+/static/c0004d798aeb74df6c3a07602461c121/ca1dc/semaphore.png 680w,
+/static/c0004d798aeb74df6c3a07602461c121/02d09/semaphore.png 1020w,
+/static/c0004d798aeb74df6c3a07602461c121/309ad/semaphore.png 1198w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;strong&gt;문제점&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;복잡성&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;다수의 프로세스가 세마포어를 사용할 경우 설계가 어려움&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;데드락(Deadlock)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;프로세스 간의 자원 요청 순서가 꼬일 경우, 데드락이 발생할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;기아 상태(Starvation)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;우선순위가 낮은 프로세스가 계속 대기하게 될 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;휴먼 에러&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;프로그래머가 직접 구현해야 하므로 이를 잘못 사용하거나 사용하지 않을 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;모니터&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AA%A8%EB%8B%88%ED%84%B0&quot; aria-label=&quot;모니터 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;모니터&lt;/h3&gt;
+&lt;p&gt;프로세스나 스레드가 공유 자원에 안전하게 접근할 수 있도록 &lt;strong&gt;동기화와 상호 배제를 보장하는 고수준의 동기화 도구&lt;/strong&gt;로 &lt;strong&gt;공유 자원과 이를 사용하는 코드(임계 구역)를 캡슐화&lt;/strong&gt;하여 동시성 문제를 해결한다.&lt;/p&gt;
+&lt;p&gt;위 세마포어 알고리즘이 모든 프로세스에서 자동으로 처리된다면, 굳이 따로 wait(), signal()를 사용할 필요가 없다. 모니터는 이를 실제로 구현한 것으로 &lt;strong&gt;공유 자원을 내부적으로 숨기고 접근하기 위한 인터페이스만 제공&lt;/strong&gt;한다.&lt;/p&gt;
+&lt;p&gt;모니터는 시스템 자원을 사용자로부터 숨기고 사용자 요구 사항을 처리할 수 있는 인터페이스만을 제공한다는 점에서 system call과 같은 개념이라고 볼 수 있다.
+&lt;strong&gt;장점&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;캡슐화&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;공유 자원과 연산을 하나의 단위로 관리하여 코드 가독성과 유지보수성 향상&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;안전성&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;동기화 오류 가능성 감소&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;궁금했던-부분&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B6%81%EA%B8%88%ED%96%88%EB%8D%98-%EB%B6%80%EB%B6%84&quot; aria-label=&quot;궁금했던 부분 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;궁금했던 부분&lt;/h2&gt;
+&lt;h3 id=&quot;non-blocking-communication의-발전&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#non-blocking-communication%EC%9D%98-%EB%B0%9C%EC%A0%84&quot; aria-label=&quot;non blocking communication의 발전 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;non-blocking communication의 발전&lt;/h3&gt;
+&lt;p&gt;위에서 언급한 대로 non-blocking communication의 busy waiting을 blocking communication이 동기화를 통해 해결했다. 하지만 동기화 방식은 &lt;strong&gt;대기 상태가 길어질 경우 전체 응답성이 떨어지고 성능이 저하될 수 있다&lt;/strong&gt;는 단점을 가지고 있다.&lt;/p&gt;
+&lt;p&gt;현대 non-blocking communication은 busy waiting과 동기화 방식의 대기 상태 문제를 해결한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;고안된 방식&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터를 수신할 준비가 되었는지 상태를 반복적으로 확인하지 않고, &lt;strong&gt;이벤트 기반 처리&lt;/strong&gt;나 &lt;strong&gt;콜백 메커니즘&lt;/strong&gt;을 사용&lt;/li&gt;
+&lt;li&gt;CPU는 데이터 송수신을 기다리지 않고 다른 작업을 계속 수행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;동작 원리&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;이벤트 기반 처리&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터가 준비되면 이벤트를 발생시켜 관련 작업을 처리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;콜백 메커니즘&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터 송수신이 완료되었을 때, 사전에 등록된 콜백 함수 호출&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;장점&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;응답 시간을 개선하고, 다수의 작업을 동시에 처리 가능&lt;/li&gt;
+&lt;li&gt;CPU 자원을 최대한 활용하여 병렬성을 높임&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;원격-프로시저-호출RPC&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9B%90%EA%B2%A9-%ED%94%84%EB%A1%9C%EC%8B%9C%EC%A0%80-%ED%98%B8%EC%B6%9CRPC&quot; aria-label=&quot;원격 프로시저 호출RPC permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;원격 프로시저 호출(RPC)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;개념&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;원격 프로시저 호출(RPC)은 &lt;strong&gt;네트워크 상의 다른 시스템(서버)에 있는 함수를 로컬 함수처럼 호출&lt;/strong&gt;할 수 있게 해주는 기술
+&lt;strong&gt;예시&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Server&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; xmlrpc&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;server &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; SimpleXMLRPCServer
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; b
+
+&lt;span class=&quot;token comment&quot;&gt;# 서버 생성&lt;/span&gt;
+server &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; SimpleXMLRPCServer&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Server is running on port 8080...&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+server&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;register_function&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;add&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;add&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# 함수 등록&lt;/span&gt;
+server&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;serve_forever&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Client&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; xmlrpc&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;client
+
+&lt;span class=&quot;token comment&quot;&gt;# 서버 연결&lt;/span&gt;
+client &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; xmlrpc&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ServerProxy&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;http://localhost:8080&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 원격 함수 호출&lt;/span&gt;
+result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; client&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;add&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;Result from server: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;result&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[CPU 스케줄링]]></title><description><![CDATA[개요 CPU 스케줄러는 여러 프로세스의 상황을 고려해 CPU와 시스템 자원을 어떻게 배분할지 결정한다. 즉, 프로세스의 모든 상태 변화를 조정하는 것이다. 종류 CPU…]]></description><link>https://choiwonyu.github.io/CPU 스케줄링/</link><guid isPermaLink="false">https://choiwonyu.github.io/CPU 스케줄링/</guid><pubDate>Sun, 29 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;개요&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;개요 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;개요&lt;/h2&gt;
 &lt;p&gt;CPU 스케줄러는 여러 프로세스의 상황을 고려해 CPU와 시스템 자원을 어떻게 배분할지 결정한다. 즉, &lt;strong&gt;프로세스의 모든 상태 변화를 조정&lt;/strong&gt;하는 것이다.&lt;/p&gt;
 &lt;h3 id=&quot;종류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A2%85%EB%A5%98&quot; aria-label=&quot;종류 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;종류&lt;/h3&gt;
 &lt;p&gt;CPU 스케줄러는 프로세스 관리의 범주를 나누어 스케줄링한다. 규모에 따라 장기 스케줄러, 중기 스케줄러, 단기 스케줄러로 구분된다.&lt;/p&gt;
