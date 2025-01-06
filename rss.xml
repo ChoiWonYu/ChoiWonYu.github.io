@@ -1,4 +1,299 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Wonyu]]></title><description><![CDATA[Hello :) I'm Wonyu]]></description><link>https://choiwonyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 05 Jan 2025 15:39:21 GMT</lastBuildDate><item><title><![CDATA[물리 메모리 관리]]></title><description><![CDATA[논리 주소와 물리 주소 논리 주소: 프로세스 입장에서 바라본 시작점을 0으로 놓았을 때 주소 물리 주소: 메모리의 입장에서 바라본 실제 저장되는 주소
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Wonyu]]></title><description><![CDATA[Hello :) I'm Wonyu]]></description><link>https://choiwonyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 06 Jan 2025 11:51:57 GMT</lastBuildDate><item><title><![CDATA[가상 메모리]]></title><description><![CDATA[…]]></description><link>https://choiwonyu.github.io/가상 메모리/</link><guid isPermaLink="false">https://choiwonyu.github.io/가상 메모리/</guid><pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;가상-메모리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%80%EC%83%81-%EB%A9%94%EB%AA%A8%EB%A6%AC&quot; aria-label=&quot;가상 메모리 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;가상 메모리&lt;/h2&gt;
+&lt;p&gt;물리 메모리의 크기와 상관없이 프로세스에 커다란 메모리 공간을 제공하는 기술이다.
+프로세스는 운영체제가 어디에 있는지, 물리 메모리의 크기가 어느 정도인지 신경 쓰지 않고 메모리를 마음대로 사용할 수 있다. 이러한 &lt;strong&gt;가상 메모리 시스템은 메모리 관리자가 운영&lt;/strong&gt;한다.&lt;/p&gt;
+&lt;p&gt;가상 메모리에서 메모리 관리자가 사용할 수 있는 메모리의 전체 크기는 &lt;strong&gt;물리 메모리(실제 메모리)와 스왑 영역을 합한 크기&lt;/strong&gt;다. 메모리 관리자는 물리 메모리와 스왑 영역을 합쳐 프로세스가 사용하는 가상 주소를 실제 메모리의 물리 주소로 변환하는데 이러한 작업을 동적 주소 변환(DAT)라고 한다.&lt;/p&gt;
+&lt;h3 id=&quot;매핑-테이블&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A7%A4%ED%95%91-%ED%85%8C%EC%9D%B4%EB%B8%94&quot; aria-label=&quot;매핑 테이블 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;매핑 테이블&lt;/h3&gt;
+&lt;p&gt;메모리 관리자는 가상 주소와 물리 주소를 일대일로 매핑한 테이블로 관리한다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/94cd0f6fa3c9eab8bf82c6bb832bd31a/fc0cd/table.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 47.05882352941176%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABFUlEQVR42nWSiY6FMAhF+/8/qrEutbWuVaaHGczLS4aEgCyXC9WVUmRZFokxSkpJjuOQ53lk33fxIYkfg6Saa4dZhvpdyiUIteM4St/3qvjbtonLOWszoIADfJ6n2jhXkGHQBv2Os8x/MSyDu64TMBDqHGCwogHLFGRd1zokazxMk6w1nmsMIHqwvzWLWvqodbAhSWKqjQZIjInee2ma5l3NasyGELT3BYQuE6BOAjXG5LgVoPgoPrXc7L7vt++6Lj2F424UEsQaQyw3QsiZDyMIwJDV2ZBaBqN6Q9iwFkX2KIDDwF7UfADtdalr21ZjdjoH1e/jwuYb8JMtQxnOduSMqQLKP2JnQGFjK9lJ8AEGBLV/+AeRJLe7ZoxoowAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;table&apos; title=&apos;&apos; src=&apos;/static/94cd0f6fa3c9eab8bf82c6bb832bd31a/ca1dc/table.png&apos; srcset=&apos;/static/94cd0f6fa3c9eab8bf82c6bb832bd31a/e7570/table.png 170w,
+/static/94cd0f6fa3c9eab8bf82c6bb832bd31a/f46e7/table.png 340w,
+/static/94cd0f6fa3c9eab8bf82c6bb832bd31a/ca1dc/table.png 680w,
+/static/94cd0f6fa3c9eab8bf82c6bb832bd31a/02d09/table.png 1020w,
+/static/94cd0f6fa3c9eab8bf82c6bb832bd31a/9d567/table.png 1360w,
+/static/94cd0f6fa3c9eab8bf82c6bb832bd31a/fc0cd/table.png 1624w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+위 매핑 테이블은 세그먼테이션 매핑 테이블 예시이다. 프로세스 A의 어떤 값이 필요하다면, 물리 메모리의 세그먼트 0에서 원하는 데이터를 가져오면 된다.&lt;/p&gt;
+&lt;h3 id=&quot;페이징과-세그먼테이션&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8E%98%EC%9D%B4%EC%A7%95%EA%B3%BC-%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%85%8C%EC%9D%B4%EC%85%98&quot; aria-label=&quot;페이징과 세그먼테이션 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;페이징과 세그먼테이션&lt;/h3&gt;
+&lt;p&gt;메모리 관리 방식은 크게 &lt;strong&gt;고정 분할 방식인 페이징&lt;/strong&gt;과 &lt;strong&gt;가변 분할 방식인 세그먼테이션&lt;/strong&gt;으로 나뉜다. 페이징은 페이지 매핑 테이블을 사용해 주소를 변환하고, 세그먼테이션은 세그멘테이션 매핑 테이블을 사용해 주소를 변환한다.&lt;/p&gt;
+&lt;h3 id=&quot;지역성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A7%80%EC%97%AD%EC%84%B1&quot; aria-label=&quot;지역성 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;지역성&lt;/h3&gt;
+&lt;p&gt;기억장치에 접근하는 패턴이 메모리 전체에 고루 분포되는 것이 아닌 특정 영역에 집중되는 성질을 나타낸다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;공간의 지역성: 현재 위치에서 가까운 데이터에 접근할 확률이 먼 거리에 있는 데이터에 접근할 확률보다 높음&lt;/li&gt;
+&lt;li&gt;시간의 지역성: 현재를 기준으로 가장 가까운 시간에 접근한 데이터가 더 먼 시간에 접근한 데이터보다 사용될 확률이 높음&lt;/li&gt;
+&lt;li&gt;순차적 지역성: 작업이 순서대로 진행됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;지역성 이론은 특히 캐시에서 이용되는 이론이다. 캐시는 시간적으로나 지역적으로 가까이 있는 데이터를 가져옴으로써 &lt;strong&gt;캐시 적중률을 높인다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;논리-주소-가상-주소-물리-주소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%85%BC%EB%A6%AC-%EC%A3%BC%EC%86%8C-%EA%B0%80%EC%83%81-%EC%A3%BC%EC%86%8C-%EB%AC%BC%EB%A6%AC-%EC%A3%BC%EC%86%8C&quot; aria-label=&quot;논리 주소 가상 주소 물리 주소 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;논리 주소, 가상 주소, 물리 주소&lt;/h3&gt;
+&lt;p&gt;가상 메모리 시스템은 프로세스가 물리 메모리를 직접 사용하는 대신 논리 주소(Logical Address)와 가상 주소(Virtual Address)를 사용하여 메모리에 접근하도록 설계되어 있다. 이러한 주소를 물리 주소(Physical Address)로 변환하는 역할은 메모리 관리 유닛(MMU)이 담당한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;논리 주소 (Logical Address)&lt;/strong&gt;: CPU가 생성하는 주소로, 프로그램의 관점에서 사용하는 주소&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;가상 주소 (Virtual Address)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;운영체제가 정의한 가상 메모리 공간의 주소로, 논리 주소와 1:1 매핑&lt;/li&gt;
+&lt;li&gt;논리 주소와 가상 주소는 사실상 동일한 경우가 많음&lt;/li&gt;
+&lt;li&gt;논리 주소는 사용자 관점, 가상 주소는 운영체제 관점에서 표현된다는 점이 주요 차이&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;물리 주소 (Physical Address)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;실제 메모리(RAM)의 주소로, 하드웨어가 메모리에 접근할 때 사용하는 주소&lt;/li&gt;
+&lt;li&gt;가상 주소는 메모리 관리 유닛(MMU)에 의해 물리 주소로 변환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;페이징-기법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8E%98%EC%9D%B4%EC%A7%95-%EA%B8%B0%EB%B2%95&quot; aria-label=&quot;페이징 기법 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;페이징 기법&lt;/h2&gt;
+&lt;p&gt;고정 분할 방식으로 메모리를 관리하는 기법이다. 가상 주소 공간과 물리 주소 공간을 같은 크기로 나누어 사용한다. 가상 주소 공간에서 분할된 각 영역을 페이지, 물리 주소 공간의 각 영역을 프레임이라 부른다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/1c022537df5a5a297aba32e6c6c10592/598cb/paging.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 85.29411764705883%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB7klEQVR42p2UiY6qUBBE/f/PMsZkNOoY931DRNzYZa+hGnGeL5JJvAleiM3p6u66VJAtx3FwPp+x3+9xOp1gWRbiOEbZStMUhmFIrKqq0HUdruvKfxX+XC4XbLdbtNttTKdTCfJ9H2EYCjhJkhfY/X7HcrnEcDhEq9VCt9vF8Xj8BTLDbDZDrVZDr9fDarUSGK8oigTCnZVQPXfGENrpdEQEGS8KFUWRjOv1Wu6pMAgCuWzblpjr9QrP8wTKuPl8LgImk8krkA/MVq1WJYjPfJEg9vZ2u8lzoZj3u90Om80GjUYDg8FA4p5AZmbfqLAYDF9io8MwL5l9DB5tYCIKGI/HaDab6Pf78s4TeDgcRHa9XpedcJb6bhHMRCyZcaPRSHZW8QRqmiYZC6CuH+GHMZSrD9uPJNBwI+hWiCDKJ84e/zskKn8CmZFZimmxJFFuBnCDBKZxw0ZR8dUdQ9V0WKZZ6tFK4S1e/987fm5utkTPfLZeLjK/aTKQIvYt8B1Uygrz8jhN+vQ7M/BisZDB/Ql8t5ysf+mjx4UTuBeeKy25bJlehDgjUlEB4jTZgo8UetmkkzQ3PoFUamYD+RjIofAVnlv6jv3jQAj+CGjfY4RRLAr5NeKJ4FeFaj/qYZw87JMZlx8Hnlcamee5DPgDgXIbelJc+fcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;paging&apos; title=&apos;&apos; src=&apos;/static/1c022537df5a5a297aba32e6c6c10592/ca1dc/paging.png&apos; srcset=&apos;/static/1c022537df5a5a297aba32e6c6c10592/e7570/paging.png 170w,
+/static/1c022537df5a5a297aba32e6c6c10592/f46e7/paging.png 340w,
+/static/1c022537df5a5a297aba32e6c6c10592/ca1dc/paging.png 680w,
+/static/1c022537df5a5a297aba32e6c6c10592/02d09/paging.png 1020w,
+/static/1c022537df5a5a297aba32e6c6c10592/598cb/paging.png 1230w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;strong&gt;가상 주소의 분할된 각 영역을 페이지&lt;/strong&gt;라고 부르며 &lt;strong&gt;물리 메모리의 각 영역은 가상 주소의 페이지와 구분하기 위해 프레임&lt;/strong&gt;이라고 부른다. &lt;strong&gt;페이지와 프레임의 크기는 같다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;페이지 5의 프레임과 같이 invalid로 표시된 부분은 스왑 영역에 있다는 의미이다.&lt;/p&gt;
+&lt;h3 id=&quot;주소-변환-과정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A3%BC%EC%86%8C-%EB%B3%80%ED%99%98-%EA%B3%BC%EC%A0%95&quot; aria-label=&quot;주소 변환 과정 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;주소 변환 과정&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/b1deaf3fb84130ca32d699854ccbc113/f97d7/page-address.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 36.47058823529412%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABgUlEQVR42m2RW4/aMBBG+f+/p1IfK5UuXXYLKoXNjUtIAgHnAiEkcW5w1k772JHGI4/Hx575Rs/nk77vaZqG+72glhXPRwcqn8uea9nRti1BnFPJBm36vK0lRVGQXa9DlFIOdSPP8zFNC8/zeP054feHw/SPg2NbFKWklAoWBNjOmu1up2k4vsD0BHEkMAyDMDyRXq7EcayAuw3uZk2cJFjGkncn5Mtsj20a3PKcummJoog0TQlPJ/JLwtepybfVgXMYsFyuVDySZymJYoxerSM/PgJOB4+XyQR3t2Xj2KxWSwW8k5cNkRDD62EYclJQf++SxtHw4/mvN14Wa76bgkuqgG/2kal1wHe3jMdjvL2H6+6xLGtoo6xbxPk8gDSw6zoFTxAiwvd95rN3ZsaW+TZSwJTRTbUgi3xoZ7FYqEJBrlq93TK6/oFse8LjcZiVnqUWUQ9fi6i9qiq6tuHR/82NarWUZaUUvpNl2VCgFdOH6i4Ptei9VrKua/5nz3+u7RPc4wvG5QVTXwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;page address&apos; title=&apos;&apos; src=&apos;/static/b1deaf3fb84130ca32d699854ccbc113/ca1dc/page-address.png&apos; srcset=&apos;/static/b1deaf3fb84130ca32d699854ccbc113/e7570/page-address.png 170w,
+/static/b1deaf3fb84130ca32d699854ccbc113/f46e7/page-address.png 340w,
+/static/b1deaf3fb84130ca32d699854ccbc113/ca1dc/page-address.png 680w,
+/static/b1deaf3fb84130ca32d699854ccbc113/02d09/page-address.png 1020w,
+/static/b1deaf3fb84130ca32d699854ccbc113/9d567/page-address.png 1360w,
+/static/b1deaf3fb84130ca32d699854ccbc113/f97d7/page-address.png 2000w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+편의를 위해 가상 주소 공간과 물리 주소 공간을 똑같이 10B로 나눴다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;가상 주소 30번의 주소 변환 과정&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;페이지를 찾는다. 30번은 페이지 3의 0번 위치에 있다.&lt;/li&gt;
+&lt;li&gt;페이지 3의 실제 물리 주소는 프레임 1에 있다.&lt;/li&gt;
+&lt;li&gt;최종적으로 프레임 1의 0번 위치에 접근한다. 이 주소가 가상 주소 30번의 물리 주소다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;가상 주소 18번의 주소 변환 과정&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;페이지를 찾는다. 18번은 페이지 1의 8번 위치에 있다.&lt;/li&gt;
+&lt;li&gt;페이지 1의 실제 물리 주소는 프레임 3에 있다.&lt;/li&gt;
+&lt;li&gt;최종적으로 프레임 3의 8번 위치에 접근한다. 이 주소가 가상 주소 18번의 물리 주소다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;정형화된-주소-변환&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%95%ED%98%95%ED%99%94%EB%90%9C-%EC%A3%BC%EC%86%8C-%EB%B3%80%ED%99%98&quot; aria-label=&quot;정형화된 주소 변환 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;정형화된 주소 변환&lt;/h3&gt;
+&lt;p&gt;이제 주소 변환 과정을 정형화해 보자. 페이징 기법에서는
+가상 주소를 VA(Virtual Address) = &amp;#x3C;P, D&gt;로 표현한다. P는 page, D는 distance를 의미한다.
+위 예시에서 가상 주소 30번을 정형화하면, VA = &amp;#x3C;3, 0&gt;으로 작성할 수 있다.&lt;/p&gt;
+&lt;p&gt;물리 주소는 PA(Physical Address) = &amp;#x3C;F, D&gt;로 표현한다. F는 frame을 의미한다.
+위 예시에서 프레임 1의 0번 위치를 정형화하면 PA = &amp;#x3C;1, 0&gt;으로 작성할 수 있다.&lt;/p&gt;
+&lt;p&gt;실제 컴퓨터는 2진법을 사용하므로 한 페이지의 크기는 2의 지수승이다.
+따라서 주소는 다음과 같이 변환된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;P = (VA) / (page size)
+D = (VA) % (page size)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;TLB&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#TLB&quot; aria-label=&quot;TLB permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;TLB&lt;/h3&gt;
+&lt;p&gt;가상 주소를 물리 주소로 변환하는 작업은 CPU 내 MMU가 담당한다. 작업은 다음과 같은 과정을 거친다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;MMU가 메모리에 있는 페이지 매핑 테이블에 접근해 물리 주소로 변환한다.&lt;/li&gt;
+&lt;li&gt;변환된 물리 주소를 이용해 필요한 데이터를 가져온다.
+위 과정에서 메모리에 접근하기 때문에 CPU 안에 있는 레지스터나 캐시에 접근할 때보다 시간이 오래걸린다. 이는 CPU 성능 저하로 이어진다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;위 문제를 해결하기 위해 &lt;strong&gt;페이지 매핑 테이블의 일부를 CPU 안쪽으로 가져오는데 이를 변환 색인 버퍼(TLB: Translation Look-ahead Buffer)라고 한다.&lt;/strong&gt; TLB는 &lt;strong&gt;캐시된 페이지 매핑 테이블&lt;/strong&gt;로 지역성 이론에 근거해 현재 사용 중이거나 사용이 예상되는 페이지 테이블의 일부를 CPU 안쪽으로 가져온다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;세그먼테이션-기법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%85%8C%EC%9D%B4%EC%85%98-%EA%B8%B0%EB%B2%95&quot; aria-label=&quot;세그먼테이션 기법 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;세그먼테이션 기법&lt;/h2&gt;
+&lt;p&gt;세그먼테이션에서는 하나의 연속된 공간을 세그먼트라고 한다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/e1b1ccebc4d843a915ab7efc317f1b77/064ff/segmentation.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 64.70588235294117%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABtklEQVR42pWT226DMAyGef9n2+WknqjUbuUMpeFYDsHL545OmrqLRTIhJP792Q7esiwyz/PTpmkSa60ae68Ge13XSdM0an3fq+HvDcMgbdvK7XaTPM8lSRIpikKu16uwx/gtXFadZO4sfsYYqapKyrJUcY8HCwTv97u+M7PmnagIj+OoZu0scZq7gKUG8n1f6rrWzJ6C4BMNsjRNlY53Dq4p4mztgzS+1vJxCeXmAl4uF8myTP2g9XCChAVkiBGAbxhikEHAvLh1mBYu5ULJN5uNZgMYqXuQcZiZGgZBoNHWmiC4NmycZiU8xaWcPgMl5DwQUCohQnzAIESUjhENW+yj89g8T7RIwiSXNCtk/CYkOD5aQw6yIHU6TCREq8o4IlfowcowQWclqwbpRitNP0jhmtK2jYJARtqUyluLTko/8yKm6fTg+9bXegVRIm/vBzkHybPrgJAVa2b8vVcXl16Wpna1TGS/2zryWM6nk/iHvcRxpCSv7ifjT0FTN9qc/eGgcxiGeudiVxbIVsHfoi8FuW5JYSRzQrvd7tn94/Godf43IaPt+VuMRFGktaT4UK5/z1/jC7RT7L60T7LWAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;segmentation&apos; title=&apos;&apos; src=&apos;/static/e1b1ccebc4d843a915ab7efc317f1b77/ca1dc/segmentation.png&apos; srcset=&apos;/static/e1b1ccebc4d843a915ab7efc317f1b77/e7570/segmentation.png 170w,
+/static/e1b1ccebc4d843a915ab7efc317f1b77/f46e7/segmentation.png 340w,
+/static/e1b1ccebc4d843a915ab7efc317f1b77/ca1dc/segmentation.png 680w,
+/static/e1b1ccebc4d843a915ab7efc317f1b77/02d09/segmentation.png 1020w,
+/static/e1b1ccebc4d843a915ab7efc317f1b77/9d567/segmentation.png 1360w,
+/static/e1b1ccebc4d843a915ab7efc317f1b77/064ff/segmentation.png 1776w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;주소-변환-과정-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A3%BC%EC%86%8C-%EB%B3%80%ED%99%98-%EA%B3%BC%EC%A0%95-1&quot; aria-label=&quot;주소 변환 과정 1 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;주소 변환 과정&lt;/h3&gt;
+&lt;p&gt;세그먼테이션 기법에선 가상 주소를 VA = &amp;#x3C;S, D&gt;로 표현한다. S는 Segment number, D는 distance를 의미한다.&lt;/p&gt;
+&lt;p&gt;주소 변환 과정은 다음과 같다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;프로세스 A는 세그먼트 0으로 분할되었으므로 S는 0, D는 32다. 따라서 가상 주소 VA = &amp;#x3C;0,32&gt; 다.&lt;/li&gt;
+&lt;li&gt;세그먼트 0의 시작주소 120을 알아낸 후 거리 32를 더해 물리 주소 152를 구한다. 이때 &lt;strong&gt;메모리 관리자는 거리가 세그먼트의 크기보다 큰지 점검한다. 크다면 메모리를 벗어나는 것이므로 해당 프로세스를 강제 종료&lt;/strong&gt;한다.&lt;/li&gt;
+&lt;li&gt;물리 주소 152번에 접근해 원하는 데이터를 읽거나 쓴다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;세그먼테이션 테이블에는 물리 메모리의 시작 주소를 나타내는 주소와 세그먼트의 크기를 나타내는 limit가 있다. 물리 메모리에 접근할 때마다 거리 D의 크기가 limit보다 작은지 매번 확인한다.&lt;/p&gt;
+&lt;h2 id=&quot;페이징-기법과-세그먼테이션-기법-비교&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8E%98%EC%9D%B4%EC%A7%95-%EA%B8%B0%EB%B2%95%EA%B3%BC-%EC%84%B8%EA%B7%B8%EB%A8%BC%ED%85%8C%EC%9D%B4%EC%85%98-%EA%B8%B0%EB%B2%95-%EB%B9%84%EA%B5%90&quot; aria-label=&quot;페이징 기법과 세그먼테이션 기법 비교 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;페이징 기법과 세그먼테이션 기법 비교&lt;/strong&gt;&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;구분&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;페이징 기법&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;세그먼테이션 기법&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;기본 개념&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;고정 크기(페이지)로 메모리를 분할하여 가상 주소와 물리 주소를 매핑&lt;/td&gt;
+&lt;td&gt;가변 크기(세그먼트)로 메모리를 분할하여 가상 주소와 물리 주소를 매핑&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;단편화&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;내부 단편화 발생: 페이지 크기보다 작은 데이터를 저장하면 남는 공간 낭비&lt;/td&gt;
+&lt;td&gt;외부 단편화 발생: 가변 크기 때문에 빈 공간이 단편적으로 발생&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;주소 변환&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;가상 주소를 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;P, D&gt;&lt;/code&gt;(Page, Offset) 형태로 표현, 페이지 매핑 테이블을 통해 물리 주소로 변환&lt;/td&gt;
+&lt;td&gt;가상 주소를 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;S, D&gt;&lt;/code&gt;(Segment, Offset) 형태로 표현, 세그먼트 매핑 테이블을 통해 물리 주소로 변환&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;관리 테이블&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;페이지 매핑 테이블(Page Mapping Table) 사용&lt;/td&gt;
+&lt;td&gt;세그먼트 매핑 테이블(Segment Mapping Table) 사용&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;단점&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;- 프로그램의 논리적 구조를 무시하고 고정 크기로 나눠져 관리 복잡성 증가  &lt;br&gt;- 페이지 크기 결정이 중요&lt;/td&gt;
+&lt;td&gt;- 메모리 단편화 심화 가능  &lt;br&gt;- 세그먼트의 크기를 동적으로 조정하기 어려움&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;장점&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;- 메모리 관리가 단순  &lt;br&gt;- 고정 크기 때문에 관리 효율적&lt;/td&gt;
+&lt;td&gt;- 프로그램의 논리적 구조(코드, 데이터, 스택 등)를 반영하여 메모리를 유연하게 관리 가능&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;사용 사례&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;현대 시스템에서 주로 사용됨&lt;/td&gt;
+&lt;td&gt;일부 특수 목적 시스템에서 사용됨 (예: 특정 임베디드 시스템, 레거시 소프트웨어)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;단편화 해결 방법&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;- 내부 단편화 최소화를 위해 적절한 페이지 크기 선택  &lt;br&gt;- 페이지 교체 알고리즘 사용&lt;/td&gt;
+&lt;td&gt;- 외부 단편화를 해결하기 위해 압축(compaction) 또는 페이징과 혼합 사용&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;요구-페이징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9A%94%EA%B5%AC-%ED%8E%98%EC%9D%B4%EC%A7%95&quot; aria-label=&quot;요구 페이징 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;요구 페이징&lt;/h2&gt;
+&lt;p&gt;운영체제는 &lt;strong&gt;필요한 모듈만 메모리에 올려 실행하고 나머지 모듈은 필요하다고 판단될 때 메모리로 불러오는데 이를 요구 페이징&lt;/strong&gt;이라고 한다.&lt;/p&gt;
+&lt;p&gt;프로세스의 일부만 메모리로 가져오는 이유는 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;메모리를 효율적으로 관리&lt;/strong&gt;: 메모리가 꽉 차면 관리하기 어려우므로 가능하면 적은 양의 프로세스만 유지한다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;응답 속도 향상&lt;/strong&gt;: 용량이 큰 프로세스를 전부 메모리로 가져와 실행하면 응답이 늦어질 수 있으므로 필요한 모듈만 올려 실행한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;가상 메모리 시스템에서 프로세스는 물리 메모리와 스왑 영역 중 한 곳에 있다. 페이지가 스왑 영역에 있는 경우는 크게 두 가지다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;요구 페이징으로 인해 처음부터 물리 메모리에 올라가지 못한 경우&lt;/li&gt;
+&lt;li&gt;메모리가 꽉 차서 스왑 영역으로 옮겨 온 경우
+어떤 것이든 &lt;strong&gt;스왑 영역에 있는 모듈은 물리 메모리로 가져오는 스왑인 과정을 거쳐야 사용 가능&lt;/strong&gt;하기 때문에 페이지 매핑 테이블에는 &lt;strong&gt;페이지가 메모리에 있는지, 스왑 영역에 있는지 표시&lt;/strong&gt;해야 한다. 이때 사용하는 비트가 유효 비트다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;페이지-매핑-테이블-엔트리-구성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A7%A4%ED%95%91-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%97%94%ED%8A%B8%EB%A6%AC-%EA%B5%AC%EC%84%B1&quot; aria-label=&quot;페이지 매핑 테이블 엔트리 구성 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;페이지 매핑 테이블 엔트리 구성&lt;/h3&gt;
+&lt;p&gt;페이지 매핑 테이블의 각 엔트리 구성은 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;페이지 번호&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;플래그 비트&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;접근 비트(access bit)&lt;/strong&gt;: 페이지가 메모리에 올라온 후 사용한 적이 있느지 알려준다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;변경 비트(modified bit)&lt;/strong&gt;: 페이지가 메모리에 올라온 후 데이터 변경이 있었는지 알려준다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;유효 비트(valid bit)&lt;/strong&gt;: 페이지가 실제 메모리에 있는지 나타낸다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;읽기 비트, 쓰기 비트, 실행 비트(read bit, write bit, execute bit)&lt;/strong&gt;: 각 작업에 대한 실행 권한을 나타낸다. 권한이 없는 작업 접근을 차단하는 데 사용된다. 따라서 위 3 비트를 합쳐 접근 권한 비트라고도 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;주소 필드&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;페이징-부재&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8E%98%EC%9D%B4%EC%A7%95-%EB%B6%80%EC%9E%AC&quot; aria-label=&quot;페이징 부재 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;페이징 부재&lt;/h2&gt;
+&lt;p&gt;프로세스가 &lt;strong&gt;페이지를 요청했을 때 해당 페이지가 메모리에 없는 상황을 페이지 부재&lt;/strong&gt;라고 한다.
+페이지 부재가 발생하면 프로세스가 해당 페이지를 사용할 수 있도록 스왑 영역에서 물리 메모리로 옮겨야 한다.&lt;/p&gt;
+&lt;p&gt;만약 메모리에 빈 프레임이 있다면, 그곳에 페이지를 올리고 페이지 매핑 테이블을 갱신하면 된다.
+하지만 &lt;strong&gt;빈 프레임이 없다면 메모리에 있는 프레임 중 하나를 스왑 영역으로 내보낸 후 해당 페이지를 가져와야 한다.&lt;/strong&gt; 이때 &lt;strong&gt;어떤 페이지를 스왑 영역으로 내보낼지 결정하는 알고리즘을 페이지 교체 알고리즘&lt;/strong&gt;이라고 하며, 페이지 교체 알고리즘에 의해 스왑 영역으로 보낼 페이지를 대상 페이지(victim page)라고 한다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;페이지-교체-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;페이지 교체 알고리즘 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;페이지 교체 알고리즘&lt;/h2&gt;
+&lt;p&gt;메모리가 꽉 차서 &lt;strong&gt;메모리에 있는 페이지를 스왑 영역으로 보내야할 때 보낼 페이지를 결정하는 알고리즘&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;h3 id=&quot;무작위-페이지-교체-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B4%EC%9E%91%EC%9C%84-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;무작위 페이지 교체 알고리즘 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;무작위 페이지 교체 알고리즘&lt;/h3&gt;
+&lt;p&gt;스왑 영역으로 보낼 페이지를 특별한 로직 없이 무작위로 선정한다.
+지역성을 전혀 고려하지 않기 때문에 성능이 좋지 않아 거의 사용되지 않는다.&lt;/p&gt;
+&lt;h3 id=&quot;FIFO-페이지-교체-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#FIFO-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;FIFO 페이지 교체 알고리즘 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;FIFO 페이지 교체 알고리즘&lt;/h3&gt;
+&lt;p&gt;큐를 이용해 시간상 메모리에 가장 먼저 들어온 페이지를 대상 페이지로 선정하여 스왑 영역으로 쫓아낸다. &lt;/p&gt;
+&lt;p&gt;무조건 오래된 페이지를 대상 페이지로 선정하기 때문에 성능이 떨어진다.&lt;/p&gt;
+&lt;h3 id=&quot;최적-페이지-교체-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B5%9C%EC%A0%81-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;최적 페이지 교체 알고리즘 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;최적 페이지 교체 알고리즘&lt;/h3&gt;
+&lt;p&gt;앞으로 사용하지 않을 페이지를 스왑 영역으로 보내는 이상적인 알고리즘이다.
+실제로 미래의 접근 패턴을 안다는 것은 불가능하기 때문에 구현이 불가능한 이론적인 알고리즘이다.&lt;/p&gt;
+&lt;h3 id=&quot;LRULeast-Recently-Used-페이지-교체-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#LRULeast-Recently-Used-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;LRULeast Recently Used 페이지 교체 알고리즘 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;LRU(Least Recently Used) 페이지 교체 알고리즘&lt;/h3&gt;
+&lt;p&gt;페이지에 접근한 시간을 기준으로 대상 페이지를 선정한다. 메모리에 올라온 후 &lt;strong&gt;가장 오랫동안 사용되지 않은 페이지를 스왑 영역으로&lt;/strong&gt; 옮긴다. &lt;/p&gt;
+&lt;p&gt;접근 시간이나 참조 비트를 유지하기 위한 메모리가 추가로 필요하기 때문에 낭비되는 메모리 공간이 많다는 것이 단점이다.&lt;/p&gt;
+&lt;h3 id=&quot;LFULeast-Frequently-Used-페이지-교체-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#LFULeast-Frequently-Used-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;LFULeast Frequently Used 페이지 교체 알고리즘 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;LFU(Least Frequently Used) 페이지 교체 알고리즘&lt;/h3&gt;
+&lt;p&gt;페이지가 &lt;strong&gt;몇 번 사용되었는지를 기준&lt;/strong&gt;으로 대상 페이지를 선정한다. 일반적인 경우 위 LRU 알고리즘과 성능이 비슷하다고 알려져 있다.&lt;/p&gt;
+&lt;p&gt;페이지 접근 횟수를 표시하는 데 추가 공간이 필요하므로 낭비되는 메모리 공간이 많다는 것이 단점이다.&lt;/p&gt;
+&lt;h3 id=&quot;NURNot-Used-Recently-페이지-교체-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#NURNot-Used-Recently-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;NURNot Used Recently 페이지 교체 알고리즘 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;NUR(Not Used Recently) 페이지 교체 알고리즘&lt;/h3&gt;
+&lt;p&gt;LRU나 LFU와 성능이 비슷하면서도 불필요한 공간 낭비 문제를 해결한 알고리즘이다. 추가 비트 2개만 사용하여 미래를 추정한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;참조 비트&lt;/strong&gt;: 페이지에 접근하면 1이 된다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;변경 비트&lt;/strong&gt;: 페이지가 변경되면 1이 된다.
+모든 페이지의 초기 상태는 (0, 0)이다. 이 상태에서 페이지에 읽기 또는 실행 같은 접근이 발생하면 (1, 0)으로 바뀐다. 만약 쓰기 또는 추가 같은 변경이 일어나면 (0, 1)이 된다. 두 연산이 모두 발생하면 (1, 1)이 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;페이지마다 접근 비트와 변경 비트를 두고 (0, 0), (0, 1), (1, 0), (1, 1)의 순서대로 대상 페이지를 선정한다.&lt;/p&gt;
+&lt;p&gt;흔한 경우는 아니지만 모든 페이지의 비트가 (1, 1)일 때는 NUR 페이지 교체 알고리즘을 정상적으로 적용할 수 없기 때문에 모든 페이지 비트를 (0, 0)으로 초기화한다.&lt;/p&gt;
+&lt;h3 id=&quot;2차-기회-페이지-교체-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2%EC%B0%A8-%EA%B8%B0%ED%9A%8C-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;2차 기회 페이지 교체 알고리즘 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;2차 기회 페이지 교체 알고리즘&lt;/h3&gt;
+&lt;p&gt;FIFO 페이지 알고리즘과 마찬가지로 큐를 사용하지만, 특정 페이지에 접근해 페이지 부재 없이 성공할 경우 해당 페이지를 큐의 맨 뒤로 이동하여 대상 페이지에서 제외한다는 차이점이 있다.&lt;/p&gt;
+&lt;p&gt;성능은 LRU, LFU, NUR 페이지 교체 알고리즘보다 약간 낮고 FIFO 페이지 교체 알고리즘보다 약간 높은 것으로 알려져있다. 그러나 &lt;strong&gt;큐를 유지하는 비용이&lt;/strong&gt; 높고, 큐의 &lt;strong&gt;중간에 있는 값을 뒤로 이동하는 작업이 추가&lt;/strong&gt;된다는 단점이 있다.&lt;/p&gt;
+&lt;h3 id=&quot;시계-페이지-교체-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%9C%EA%B3%84-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B5%90%EC%B2%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;시계 페이지 교체 알고리즘 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;시계 페이지 교체 알고리즘&lt;/h3&gt;
+&lt;p&gt;시계 페이지 교체 알고리즘은 &lt;strong&gt;원형 큐&lt;/strong&gt;를 사용한다.&lt;/p&gt;
+&lt;p&gt;대상 페이지를 선정하는 포인터와 접근 비트가 있다. 대상 포인터가 가리키는 페이지가 스왑으로 옮겨지고, 해당 포인터는 아래쪽으로 이동한다. 접근 비트가 1이면 0으로 만들고 다시 한 칸 밑으로 이동한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NUR 페이지 교체 알고리즘보다 추가 공간이 적게 들지만 알고리즘이 복잡하고 계산량이 많다&lt;/strong&gt;는 것이 단점이다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;스레싱&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8A%A4%EB%A0%88%EC%8B%B1&quot; aria-label=&quot;스레싱 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;스레싱&lt;/h2&gt;
+&lt;p&gt;여러 프로세스를 동시에 실행하게 되어 메모리가 꽉 찬 후에는 새로운 프로그램을 메모리에 올리기 위해 새로운 프로그램을 메모리에 올리기 위해 기존 프로그램을 스왑 영역으로 옮기는 횟수가 잦아진다. &lt;/p&gt;
+&lt;p&gt;이와 같이 &lt;strong&gt;프로세스가 많이 실행되고 하드디스크 입출력이 너무 많아져 작업이 멈춘 것 같은 상태를 스레싱&lt;/strong&gt;이라 한다.&lt;/p&gt;
+&lt;p&gt;스레싱은 각 프로세스에 프레임을 할당하는 문제와도 연결된다. &lt;strong&gt;실행 중인 여러 프로세스에 프레임을 얼마나 나누어 주느냐에 따라 시스템의 성능이 달라진다.&lt;/strong&gt; 너무 적은 프레임을 할당한다면 페이지 부재가 빈번하게 일어날 것이고, 너무 많은 프레임을 할당한다면 메모리를 낭비해 전반적인 시스템 성능이 낮아질 것이다.&lt;/p&gt;
+&lt;h2 id=&quot;프레임-할당-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A0%88%EC%9E%84-%ED%95%A0%EB%8B%B9-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;프레임 할당 방식 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;프레임 할당 방식&lt;/h2&gt;
+&lt;p&gt;위에서 언급한 문제를 최소화하기 위해 남아 있는 프레임을 실행 중인 프로세스에 적절히 나누어 주는 정책이 필요하다. 프로세스에 프레임을 할당하는 방식은 크게 정적 할당과 동적 할당으로 구분된다.&lt;/p&gt;
+&lt;h3 id=&quot;정적-할당&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%95%EC%A0%81-%ED%95%A0%EB%8B%B9&quot; aria-label=&quot;정적 할당 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;정적 할당&lt;/h3&gt;
+&lt;p&gt;프로세스 실행 초기에 프레임을 나누어 준 후 그 크기를 고정하는 방식이다. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;균등 할당&lt;/strong&gt;: 프로세스의 크기와 상관없이 &lt;strong&gt;사용 가능한 프레임을 모든 프로세스에 동일하게 할당&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;한계&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;크기가 큰 프로세스의 경우 페이지 부재가 빈번하게 발생&lt;/li&gt;
+&lt;li&gt;크기가 작은 프로세스의 경우 메모리 낭비가 발생한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;비례 할당&lt;/strong&gt;: &lt;strong&gt;프로세스의 크기에 비례&lt;/strong&gt;하여 프레임을 할당&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;한계&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;프로세스가 실행 중에 필요로 하는 프레임을 유동적으로 반영하지 못함&lt;/li&gt;
+&lt;li&gt;사용하지 않을 메모리를 처음부터 미리 확보해 공간을 낭비&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;동적-할당&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8F%99%EC%A0%81-%ED%95%A0%EB%8B%B9&quot; aria-label=&quot;동적 할당 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;동적 할당&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;프로세스를 실행하는 중에 시시각각 변하는 요청에 따라 프레임을 나누어 주기도 하고 회수하기도 하는 방식&lt;/strong&gt;이다. 작업 집합 모델을 사용하는 방식과 페이지 부재를 사용하는 방식이 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;작업집합 모델&lt;/strong&gt;: 지역성 이론을 기반으로 가장 최근 접근한 프레임이 이후에도 참조될 가능성이 높다는 가정에서 출발해 최근 일정 시간 동안 참조된 페이지들을 집합으로 만들고, 집합에 있는 페이지들을 물리 메모리에 유지하여 프로세스의 실행을 돕는다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;페이지 부재 빈도&lt;/strong&gt;: 페이지 부재 횟수를 기록하여 페이지 부재 비율을 계산하는 방식으로 상한선과 하한선을 설정한다. 상한선을 초과하면 프레임을 늘리고, 하한선 밑으로 내려가면 프레임을 회수한다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[물리 메모리 관리]]></title><description><![CDATA[논리 주소와 물리 주소 논리 주소: 프로세스 입장에서 바라본 시작점을 0으로 놓았을 때 주소 물리 주소: 메모리의 입장에서 바라본 실제 저장되는 주소
 논리 주소와 물리 주소의 변환은 메모리 관리 유닛(MMU)이 담당한다. 주소 변환 과정:
  CPU…]]></description><link>https://choiwonyu.github.io/물리 메모리 관리/</link><guid isPermaLink="false">https://choiwonyu.github.io/물리 메모리 관리/</guid><pubDate>Mon, 06 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;논리-주소와-물리-주소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%85%BC%EB%A6%AC-%EC%A3%BC%EC%86%8C%EC%99%80-%EB%AC%BC%EB%A6%AC-%EC%A3%BC%EC%86%8C&quot; aria-label=&quot;논리 주소와 물리 주소 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;논리 주소와 물리 주소&lt;/h2&gt;
 &lt;ul&gt;
