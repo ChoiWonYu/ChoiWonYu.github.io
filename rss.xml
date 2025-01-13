@@ -1,4 +1,174 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Wonyu]]></title><description><![CDATA[Hello :) I'm Wonyu]]></description><link>https://choiwonyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 10 Jan 2025 14:08:44 GMT</lastBuildDate><item><title><![CDATA[파일시스템]]></title><description><![CDATA[파일 시스템 컴퓨터에는 다양한 종류의 파일이 있고, 이들은 하드디스크 같은 제…]]></description><link>https://choiwonyu.github.io/파일시스템/</link><guid isPermaLink="false">https://choiwonyu.github.io/파일시스템/</guid><pubDate>Fri, 10 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;파일-시스템&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8C%8C%EC%9D%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C&quot; aria-label=&quot;파일 시스템 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;파일 시스템&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Wonyu]]></title><description><![CDATA[Hello :) I'm Wonyu]]></description><link>https://choiwonyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 13 Jan 2025 04:11:59 GMT</lastBuildDate><item><title><![CDATA[네트워크 개요]]></title><description><![CDATA[…]]></description><link>https://choiwonyu.github.io/네트워크 개요/</link><guid isPermaLink="false">https://choiwonyu.github.io/네트워크 개요/</guid><pubDate>Mon, 13 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;용어-정리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC&quot; aria-label=&quot;용어 정리 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;용어 정리&lt;/h2&gt;
+&lt;h3 id=&quot;네트워크-기초-용어&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B8%B0%EC%B4%88-%EC%9A%A9%EC%96%B4&quot; aria-label=&quot;네트워크 기초 용어 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;네트워크 기초 용어&lt;/h3&gt;
+&lt;p&gt;네트워크를 이해하려면 시스템, 인터페이스 전송 매체, 프로토콜, 네트워크, 인터넷과 같은 용어를 먼저 이해해야 한다. &lt;/p&gt;
+&lt;p&gt;네트워크는 하드웨어적 &lt;strong&gt;전송 매체를 매개&lt;/strong&gt;로 서로 연결되어 &lt;strong&gt;데이터를 교환하는 시스템의 모음&lt;/strong&gt;이며, 시스템과 전송 매체의 &lt;strong&gt;연결 지점에 대한 규격이 인터페이스&lt;/strong&gt;다. 시스템이 데이터를 교환할 때는 &lt;strong&gt;통신 규칙인 프로토콜&lt;/strong&gt;이 필요하다. 위 개념들을 도식화 해보면 다음과 같다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/3a3dc4a63c34e39b73ddaf5bd8d2dfb4/b72ad/Network.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 54.11764705882353%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABjElEQVR42mVSaXOCQAz1//+09kOd6diKSJUbll05ZcAFXpNVLNjMhCPHy8uxGYYBZVkiyzJ0fY+laPLlRYGyqsBxS+kpVimFpmlW9o0QAqwMqpIUtm/hlPvYxxaSKERFYKwijiGqDFVfw5M+PNc1YJfLxeSyTNOEDTMLggBhGKKUCo5zgCwU2VykZPdJEwJLPBdfpx3SIsNut4WMIni+jzRJIKX8Y1jXNRRVKYil6/1gpCqzSCo2Myio9Vm4fSZimFMev58M+aEHDd12eDu+o9Etee7OcRxxu92gtTb/RjE9fUymbdv1DOdAlkSkOAnXfHPCtGB7B3t8Y1qBLOM2S8eoB3xYW6SN+Bc4A80EuG0uyrpi+FrFtr6xP3wiV/lzNrO4ZYCgjuGXES0qwfl8Rp7nfx3wDFe3RfOSIkNG5yOVNINf3l9zbZDRWHhJvFkGdBzHxB2PR8R0DSvArusQkTGlJA7iDS4Bp4FavF4xUZue58G2bQPKi5sXtQJk4a0xA273dYOPm1m1+DrnXwpQUsueKAvpAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;Network&apos; title=&apos;&apos; src=&apos;/static/3a3dc4a63c34e39b73ddaf5bd8d2dfb4/ca1dc/Network.png&apos; srcset=&apos;/static/3a3dc4a63c34e39b73ddaf5bd8d2dfb4/e7570/Network.png 170w,
+/static/3a3dc4a63c34e39b73ddaf5bd8d2dfb4/f46e7/Network.png 340w,
+/static/3a3dc4a63c34e39b73ddaf5bd8d2dfb4/ca1dc/Network.png 680w,
+/static/3a3dc4a63c34e39b73ddaf5bd8d2dfb4/02d09/Network.png 1020w,
+/static/3a3dc4a63c34e39b73ddaf5bd8d2dfb4/b72ad/Network.png 1242w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;시스템&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;내부 규칙에 따라 &lt;strong&gt;자율적으로 동작하는 대상&lt;/strong&gt;을 가리킨다. 시스템의 동작에는 외부 입력이 있을 수 있으며, 내부 정보와 외부 입력의 조합에 따른 출력이 있을 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;인터페이스&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;시스템과 시스템을 연결하기 위한 &lt;strong&gt;표준화된 접촉 지점&lt;/strong&gt;을 의미한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;하드웨어적 관점: 물리적 규격&lt;/li&gt;
+&lt;li&gt;소프트웨어적 관점: 함수 이름, 인수 지정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;전송 매체&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;시스템 간 &lt;strong&gt;데이터 전달을 위한 물리적 전송 수단&lt;/strong&gt;을 가리킨다.&lt;/p&gt;
+&lt;p&gt;ex) 공기, 무선 신호 등&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;프로토콜&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;논리적으로 상호 연동되는 시스템이 전송 매체를 통해 &lt;strong&gt;데이터를 교환할 때 따르는 규칙&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;인터페이스와 차이
+프로토콜과 인터페이스가 비교될 때는 &lt;strong&gt;상하 개념&lt;/strong&gt;이 적용된다.
+프로토콜은 동등 계층 사이의 관계를 다루지만, 인터페이스는 상하 계층 사이 관계를 다룬다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;인터넷&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;전 세계의 모든 네트워크가 유기적으로 연결되어 동작하는 &lt;strong&gt;통합 네트워크&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;표준화&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;서로 다른 시스템이 상호 연동해 동작하려면 &lt;strong&gt;표준화를 통한 형식의 통일&lt;/strong&gt;이 필요하다.&lt;/p&gt;
+&lt;h3 id=&quot;시스템-기초-용어&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B8%B0%EC%B4%88-%EC%9A%A9%EC%96%B4&quot; aria-label=&quot;시스템 기초 용어 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;시스템 기초 용어&lt;/h3&gt;
+&lt;p&gt;네트워크 시스템은 수행 기능에 따라 다음과 같이 다양한 명칭으로 부를 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;노드&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;컴퓨터 이론 분야에서 &lt;strong&gt;특정 시스템을 가리키는 가장 일반적인 용어&lt;/strong&gt;로 사용된다.
+모든 시스템을 통칭하며, &lt;strong&gt;인터넷 내부를 구성하는 라우터&lt;/strong&gt;와 &lt;strong&gt;인터넷 바깥쪽에 연결되어 데이터를 주고받는 호스트로 구분&lt;/strong&gt;된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;라우터&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;인터넷 내부를 구성하며, 기본적으로 &lt;strong&gt;데이터 전송 기능&lt;/strong&gt;을 포함한다. 라우터의 &lt;strong&gt;주요 역할은 데이터 중개 기능&lt;/strong&gt;이며, 호스트들 사이 데이터 전송이 인터넷 내부에서 최적의 경로를 통해 이루어지도록 한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;호스트&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;인터넷 바깥쪽에 연결되어 일반 사용자들의 네트워크 접속 창구 역할을 한다.
+응용 프로그램을 실행할 수 있고, 이를 통해 사용자들은 다양한 서비스를 제공받는다. &lt;/p&gt;
+&lt;p&gt;좀 더 정확하게 말하자면, &lt;strong&gt;호스트는 인터넷이 가장자리&lt;/strong&gt;에서 사용자와 직접 상호작용하거나 데이터를 생성, 소비하는 시스템이고 &lt;strong&gt;라우터는 인터넷의 중심부&lt;/strong&gt;에서 데이터의 중계와 경로 최적화를 담당한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;클라이언트와 서버&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;클라이언트는 임의의 인터넷 &lt;strong&gt;서비스를 이용&lt;/strong&gt;하는 프로세스고, 서버는 &lt;strong&gt;서비스를 제공&lt;/strong&gt;하는 프로세스다. 클라이언트와 서버의 개념은 &lt;strong&gt;서비스 단위&lt;/strong&gt;이므로 고정되지 않는다. 따라서 기준이 되는 서비스에 따라 클라이언트가 서버가 될 수도, 서버가 클라이언트가 될 수도 &lt;strong&gt;상대적 개념&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;구조적-모델&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%EC%A1%B0%EC%A0%81-%EB%AA%A8%EB%8D%B8&quot; aria-label=&quot;구조적 모델 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;구조적 모델&lt;/h2&gt;
+&lt;h3 id=&quot;OSI-7계층-모델&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#OSI-7%EA%B3%84%EC%B8%B5-%EB%AA%A8%EB%8D%B8&quot; aria-label=&quot;OSI 7계층 모델 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;OSI 7계층 모델&lt;/h3&gt;
+&lt;p&gt;호스트가 제공하는 복잡한 네트워크 기능을 연관된 그룹으로 묶어 계층 모델로 설명할 수 있다.
+다수의 시스템을 서로 연결해 통신하려면 &lt;strong&gt;전체 시스템 구조를 표준화&lt;/strong&gt;해야 한다. 표준화된 구조가 바로 OSI 7계층 모델이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;물리 계층(Physical Layer)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;호스트를 전송 매체와 연결하기 위한 인터페이스 규칙과 전송 매체의 특성을 다루며, &lt;strong&gt;데이터가 전송 매체를 통해 신호로 전달되도록&lt;/strong&gt; 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;데이터 링크 계층(Data Link Layer)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;주로 물리 계층이 감지한 &lt;strong&gt;오류를 제어&lt;/strong&gt;하는 기능을 수행한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;네트워크 계층(Network Layer)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터가 목적지까지 안전하게 도착하기 위해선 여러 라우터를 거쳐야 한다. 주로 이 과정에서 &lt;strong&gt;올바른 경로를 선택할 수 있도록 지원&lt;/strong&gt;한다. 네트워크 부하가 증가하면 특정 지역에 혼잡이 발생할 수 있는데 &lt;strong&gt;혼잡 제어&lt;/strong&gt; 또한 네트워크 계층이 담당한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;전송 계층(Transport Layer)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;최종적인 경로상의 양 끝단 사이의 연결이 완성되는 계층으로 주로 &lt;strong&gt;데이터 신뢰성과 정확성을 보장&lt;/strong&gt;한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;세션 계층(Session Layer)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;통신 세션의 설정, 유지, 종료를 담당하며, 주로 세션 연결과 연결 복구 작업을 수행한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;표현 계층(Presentation Layer)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;전송되는 데이터의 의미를 잃지 않도록 올바르게 표현하고, 호스트들이 표준화된 방법으로 데이터를 인식할 수 있게 해준다.
+ex) 압축, 암호화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;응용 계층&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;일반 사용자를 위한 다양한 네트워크 &lt;strong&gt;응용 서비스를 지원&lt;/strong&gt;한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/c57454d359ea264666ec676c343081ff/23a6b/OSI.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 58.82352941176471%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB0klEQVR42l2T2a7iMAyG+/4vxtVodLgAsQgGaOnpTptudMGTz1U4zERKU8f2799LPLHr9XpxSFVVcjwe5XK5yOf953J3h8NBVquV7Pf7f+w8J0zTJFEUyWazkdPpJMMwqOH/e55naZpG8jyXMAz1fD6fP4B8cE6SVNq2tQ6Tghtj1PFzAZYkiTweD2vbqJ6N3HXdAogRzIqikCSOZL1ei+/7Gnm328ntdtN/9OfzWbbbrXRtJzc/kD9WLiwYgBAYx1E8Y2qpyoeUdSffWamgZVkqW1IhGCcb4Nmyb7pBctNbgEFZUwr0sPWyLFPkySpMO9j0+V/SZgGOE7IrQVbWYupaA8AMMPQw9XBYHB+axq/fa00zTVO5Xq9yv9+1+6QcBL5c/bukeWHl3MqB1g49oAqIADosiRZGqVS2DBhyDwt07DTLpR9nbSJ6GPd9//avLWsPhSto09TKLEoLNSRiHMcane4TDFAc8aG+nGCQAYF0bDAACLakFYTfUpTGdvzLOsU6IqZuJC1KHXxGh1JRGoKSOpm85xB2NIfOLunZucxt583ShNnOfj+6BzAqG5cVwIDSuDege1JQB5Ta0Olhekn7nKQfZgV1r4WFHWBuGtxL+QvXKJyEZSKCzAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;OSI&apos; title=&apos;&apos; src=&apos;/static/c57454d359ea264666ec676c343081ff/ca1dc/OSI.png&apos; srcset=&apos;/static/c57454d359ea264666ec676c343081ff/e7570/OSI.png 170w,
+/static/c57454d359ea264666ec676c343081ff/f46e7/OSI.png 340w,
+/static/c57454d359ea264666ec676c343081ff/ca1dc/OSI.png 680w,
+/static/c57454d359ea264666ec676c343081ff/02d09/OSI.png 1020w,
+/static/c57454d359ea264666ec676c343081ff/9d567/OSI.png 1360w,
+/static/c57454d359ea264666ec676c343081ff/23a6b/OSI.png 1766w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+한 호스트를 기준으로 데이터 전송은 위아래 양방향으로 모두 가능하며, 두 호스트 사이에서는 좌우 양방향으로 모두 가능하다.
+다만, 좌우 간 물리적 데이터 전송은 반드시 아래 물리 계층을 통해 이루어진다.&lt;/p&gt;
+&lt;h3 id=&quot;인터네트워킹&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B8%ED%84%B0%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9&quot; aria-label=&quot;인터네트워킹 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;인터네트워킹&lt;/h3&gt;
+&lt;p&gt;네트워크와 네트워크의 연결을 인터네트워킹이라고 한다. 인터네트워킹 시스템은 수 많은 &lt;strong&gt;네트워크를 연결해 데이터를 중개&lt;/strong&gt;할 수 있어야 한다.&lt;/p&gt;
+&lt;p&gt;연결된 모든 네트워크에 대해 물리적이고 논리적인 인터페이스를 지원해 둘 이상의 네트워크를 유기적으로 연동할 수 있어야 한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Gateway&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;인터네트워킹 기능을 수행하는 시스템을 일반적으로 Gateway라고 한다.
+Gateway는 서로 다른 네트워크 간의 데이터 통신을 가능하게 한다. &lt;strong&gt;프로토콜 변환&lt;/strong&gt; 역할을 수행하고, OSI 7계층 중 &lt;strong&gt;응용 계층까지 동작&lt;/strong&gt;할 수 있는 고급 장치이다.&lt;/p&gt;
+&lt;h3 id=&quot;프로토콜&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C&quot; aria-label=&quot;프로토콜 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;프로토콜&lt;/h3&gt;
+&lt;p&gt;프로토콜은 시스템이 데이터를 교환하기 위해 사용하는 통신 규칙이다. OSI 7 계층 모델에서는 각 계층에서 수행하는 프로토콜이 서로 역할을 분담해 독립적으로 동작한다. 따라서 계층 2에는 계층 2끼리 통신할 수 있는 프로토콜이 존재한다.&lt;/p&gt;
+&lt;p&gt;ex) RPC, HTTP, IP 등&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;데이터 단위&lt;/strong&gt;
+데이터를 프로토콜에서 정의된 규격에 맞춰야 한다. 이와 같은 &lt;strong&gt;한 단위의 규격으로 묶인 전송 데이터를 데이터 단위&lt;/strong&gt;라고 한다.&lt;/p&gt;
+&lt;p&gt;OSI 7계층 모델의 각 계층에 규격화된 데이터에는 고유 명칭이 있다. 계층에 상관 없이 사용할 때는 PDU(Protocol Data Unit)라고 부른다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;계층&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;PDU 이름&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;역할 및 주요 정보&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;물리 계층&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Bits&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;데이터를 비트 단위로 전송 (0과 1).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;데이터 링크 계층&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Frame&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;MAC 주소 및 오류 검출 정보(CRC)를 포함한 프레임 단위로 데이터 처리.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;네트워크 계층&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Packet&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;IP 주소(출발지/목적지)를 포함한 패킷 단위로 라우팅 수행.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;전송 계층&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Segment/Datagram&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;포트 번호를 포함하여 신뢰성(TCP) 또는 비신뢰성(UDP) 전송.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;세션 계층&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Data&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;세션 설정 및 데이터 흐름 제어.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;표현 계층&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Data&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;데이터 압축, 암호화, 형식 변환.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;응용 계층&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Data&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;최종 사용자 응용 프로그램에서 사용하는 데이터.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;주소의-표현&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A3%BC%EC%86%8C%EC%9D%98-%ED%91%9C%ED%98%84&quot; aria-label=&quot;주소의 표현 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;주소의 표현&lt;/h2&gt;
+&lt;p&gt;일반적으로 주소의 개념은 단순히 서로를 구분한다는 고유 목적을 넘어 주소가 가리키는 대상의 특징을 표현할 수 있다.&lt;/p&gt;
+&lt;p&gt;시스템을 지칭하는 구분자는 &lt;strong&gt;내부에서 처리되는 숫자 기반의 주소&lt;/strong&gt;와 함께 사용자의 이해와 편리성을 도모하는 &lt;strong&gt;문자로된 이름&lt;/strong&gt;을 제공해야 한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IP 주소&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;IP 프로토콜이 호스트를 구분하기 위해 사용하는 주소 체계이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IPv4: 32비트의 이진 숫자로 구성된다.&lt;/li&gt;
+&lt;li&gt;IPv6: 128비트의 이진 숫자로 구성된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;IP 주소는 임의로 할당되는 것이 아닌 특정 규칙에 따라 인접한 주소들을 그룹으로 묶어 관리한다. 이는 네트워크 계층에서 경로를 선택할 때 중요한 기준이 된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;호스트 이름&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;위에서 언급한 사용자들의 이해와 편리성을 위한 문자로된 주소가 호스트 이름이다.
+이는 DNS를 통해 IP 주소로 변환된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DNS&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DNS는 &lt;strong&gt;주소와 이름 정보를 자동으로 유지하고 관리&lt;/strong&gt;하는 분산 데이터베이스 시스템이다.
+네트워크가 커지면 DNS에 저장되는 정보의 양이 과도하게 많아지기 때문에 하나의 집중화된 네임 서버가 전체 호스트를 관리하는 것이 아닌 &lt;strong&gt;여러 영역에 분산되어 해당 영역에 위치한 호스트 정보를 관리&lt;/strong&gt;한다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[파일시스템]]></title><description><![CDATA[파일 시스템 컴퓨터에는 다양한 종류의 파일이 있고, 이들은 하드디스크 같은 제…]]></description><link>https://choiwonyu.github.io/파일시스템/</link><guid isPermaLink="false">https://choiwonyu.github.io/파일시스템/</guid><pubDate>Fri, 10 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;파일-시스템&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8C%8C%EC%9D%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C&quot; aria-label=&quot;파일 시스템 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;파일 시스템&lt;/h2&gt;
 &lt;p&gt;컴퓨터에는 다양한 종류의 파일이 있고, 이들은 하드디스크 같은 제 2저장장치에 보관된다.
 보관 과정에 사용자가 개입하게 되면, 다른 파일들이 훼손되거나 저장장치 내부가 어지럽혀질 수 있다. 따라서 운영체제는 &lt;strong&gt;파일 관리자를 두어 저장장치의 전체 관리를 맡기는데 이를 파일 시스템&lt;/strong&gt;이라고 한다.&lt;/p&gt;
 &lt;h3 id=&quot;주요-개념&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A3%BC%EC%9A%94-%EA%B0%9C%EB%85%90&quot; aria-label=&quot;주요 개념 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;주요 개념&lt;/h3&gt;
