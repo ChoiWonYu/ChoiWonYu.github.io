@@ -1,4 +1,184 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Wonyu]]></title><description><![CDATA[Hello :) I'm Wonyu]]></description><link>https://choiwonyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 28 Feb 2025 06:19:57 GMT</lastBuildDate><item><title><![CDATA[Spring 예외 처리]]></title><description><![CDATA[📌 Spring 기본 예외 처리 방식 Spring Boot에서 별도의 핸들링 없이 예외가 발생하면, DispatchServlet이 엔드포인트로 요청을 위임하고, 가 실행되고, 상태 코드 50…]]></description><link>https://choiwonyu.github.io/Spring 예외 처리/</link><guid isPermaLink="false">https://choiwonyu.github.io/Spring 예외 처리/</guid><pubDate>Fri, 28 Feb 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;-Spring-기본-예외-처리-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-Spring-%EA%B8%B0%EB%B3%B8-%EC%98%88%EC%99%B8-%EC%B2%98%EB%A6%AC-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot; Spring 기본 예외 처리 방식 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;📌 Spring 기본 예외 처리 방식&lt;/strong&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Wonyu]]></title><description><![CDATA[Hello :) I'm Wonyu]]></description><link>https://choiwonyu.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 03 Mar 2025 06:10:24 GMT</lastBuildDate><item><title><![CDATA[Spring AOP]]></title><description><![CDATA[✅ AOP(Aspect Oriented Programming)은 핵심 비즈니스 로직이 아닌 공통적인 부가적인 관심사(로깅, 보안, 트랜잭션 관리 등)를 분리하여 코드의 유지보수성을 높이는 프로그래밍 기법 📌 핵심 개념 용어 설명 Aspect…]]></description><link>https://choiwonyu.github.io/Spring AOP/</link><guid isPermaLink="false">https://choiwonyu.github.io/Spring AOP/</guid><pubDate>Mon, 03 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;✅ &lt;strong&gt;AOP(Aspect Oriented Programming)은 핵심 비즈니스 로직이 아닌 공통적인 부가적인 관심사(로깅, 보안, 트랜잭션 관리 등)를 분리하여 코드의 유지보수성을 높이는 프로그래밍 기법&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-핵심-개념&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%ED%95%B5%EC%8B%AC-%EA%B0%9C%EB%85%90&quot; aria-label=&quot; 핵심 개념 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;📌 핵심 개념&lt;/strong&gt;&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;용어&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;설명&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Aspect&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;공통 관심사(로깅, 트랜잭션, 보안 등)를 &lt;strong&gt;모듈화한 객체&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Advice&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;특정 JoinPoint에서 &lt;strong&gt;실행될 코드&lt;/strong&gt; (Before, After, Around 등)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;JoinPoint&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Advice가 &lt;strong&gt;실행될 수 있는 지점&lt;/strong&gt; (메서드 실행 시점 등)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Pointcut&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;JoinPoint 중에서 &lt;strong&gt;Advice를 적용할 대상을 정의하는 표현식&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Weaving&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Advice를 실제 대상 객체에 적용하는 과정&lt;/strong&gt; (컴파일 타임, 런타임 등)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-Spring-AOP의-주요-Advice-종류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-Spring-AOP%EC%9D%98-%EC%A3%BC%EC%9A%94-Advice-%EC%A2%85%EB%A5%98&quot; aria-label=&quot; Spring AOP의 주요 Advice 종류 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;📌 Spring AOP의 주요 Advice 종류&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;✅ 오류 확률 감소와 간결한 코드를 위해 최소한의 유형 선택 권장&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Advice 유형&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;설명&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;예제&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Before&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;대상 메서드 실행 &lt;strong&gt;전&lt;/strong&gt; 실행&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;@Before(&quot;execution(* com.example..*(..))&quot;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;After Returning&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;대상 메서드 실행 &lt;strong&gt;후&lt;/strong&gt; (예외 발생 X) 실행&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;@AfterReturning(&quot;execution(* com.example..*(..))&quot;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;After Throwing&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;대상 메서드 실행 중 예외 발생 시 실행&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;@AfterThrowing(&quot;execution(* com.example..*(..))&quot;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;After (Finally)&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;대상 메서드 실행 &lt;strong&gt;완료 후&lt;/strong&gt; (성공/실패 상관없음) 실행&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;@After(&quot;execution(* com.example..*(..))&quot;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Around&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;대상 메서드 실행 &lt;strong&gt;전/후&lt;/strong&gt; 모두 실행 (가장 강력함)&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;@Around(&quot;execution(* com.example..*(..))&quot;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;🔹 AOP 동작 순서&lt;/strong&gt;  &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1️⃣ @Around 실행 (메서드 실행 전)  
+2️⃣ @Before 실행  
+3️⃣ 대상 메서드 실행  
+4️⃣ @AfterReturning 실행 (정상 종료 시)  
+5️⃣ @AfterThrowing 실행 (예외 발생 시)  
+6️⃣ @After 실행 (무조건 실행)  
+7️⃣ @Around 실행 (메서드 실행 후)  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-Spring-AOP-적용-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-Spring-AOP-%EC%A0%81%EC%9A%A9-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot; Spring AOP 적용 방식 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;📌 Spring AOP 적용 방식&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;✅ 프록시 기반 방식과 AspectJ 기반 방식이 있다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;프록시-기반-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9D%EC%8B%9C-%EA%B8%B0%EB%B0%98-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;프록시 기반 방식 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;프록시 기반 방식&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;✅ &lt;strong&gt;Spring이 기본적으로 제공하는 AOP 방식&lt;/strong&gt;&lt;br&gt;
+✅ &lt;strong&gt;런타임에 프록시 객체를 생성하여 AOP 기능을 적용&lt;/strong&gt;&lt;br&gt;
+✅ &lt;strong&gt;스프링 컨테이너에서 관리하는 빈에만 적용 가능&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🔹 동작 방식&lt;/strong&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JDK 동적 프록시: 인터페이스가 있는 경우, &lt;code class=&quot;language-text&quot;&gt;java.lang.reflect.Proxy&lt;/code&gt;를 이용해 프록시 생성&lt;/li&gt;
+&lt;li&gt;CGLIB 프록시(클래스 기반): 인터페이스가 없는 경우, CGLIB 라이브러리를 사용해 바이트코드 조작으로 프록시 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;🔹 프록시 동작 방식&lt;/strong&gt;&lt;br&gt;
+AOP 없이 Spring 빈을 실행시키면, 아래와 같이 실행될 것이다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/a8a8cf9c231a2cbf88a4c4ce179885cf/77dcf/without-proxy.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 40.588235294117645%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABX0lEQVR42m2STU/CQBCG+x+NxqMXf4WJJ4wn/4InPegFE028UeBWDaLYlPQTBS39oKVCgH7tvnYXShCZ5M1sZ3ae3dmpkCYZ3j6u0NROIXbOUXuvoKFUIMpnaKgnMIY1kAxIkhhpmiKOY4RhiMlkwv18PkeWZTzHJFAKSNYFqq09XD4e4KZ5hGvxEHfSMe47++h+V8GMUsJ9kiQYDAYcZts2B25aAaR8wU40LQskp/C9cAWhO1Xmdu0RCFkmop8QhqEjzzP4vsdjedFrebPNIkLIWv+AlCwLxlEEwzSR5jk8318Bi6IdkBK0HWNaA6PxGLqm8Y3BaPSnrU3bbnl7LZDiRoo9hKiouK3ViynLeJCeUFe6kD6/8Kxq0FQVuq5DluXiOXw4jsOHwuS6Lo/1+30EQcDekKDneugOHbyaPbRNCy+agbZh8oN6RTH7VZhmsxn3bLJlbLFYcE2nU/79C94AXEHSmDHVAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;without proxy&apos; title=&apos;&apos; src=&apos;/static/a8a8cf9c231a2cbf88a4c4ce179885cf/ca1dc/without-proxy.png&apos; srcset=&apos;/static/a8a8cf9c231a2cbf88a4c4ce179885cf/e7570/without-proxy.png 170w,
+/static/a8a8cf9c231a2cbf88a4c4ce179885cf/f46e7/without-proxy.png 340w,
+/static/a8a8cf9c231a2cbf88a4c4ce179885cf/ca1dc/without-proxy.png 680w,
+/static/a8a8cf9c231a2cbf88a4c4ce179885cf/77dcf/without-proxy.png 930w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+만약 AOP를 활용하면, Spring 빈은 아래와 같이 실행된다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/dbac84cda5778c5ee7212297a69191ff/5cfe2/with-proxy.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 37.64705882352941%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABv0lEQVR42o2PS28SYRSGP7uwC5d272/QlbZL/ROuanFd46WNiUKURNEEL0tdmC5qNcGk2oBIBRpTa0Ex2FJENK3cBmoGZwoFwzA6zOPMGGdhovEkT86b853znvOJSO448eJJohvjPH7tYT7tYeHtBE8yHmKFCZ7lx623E6idKnYMBgNM0/wrYrXkJZyZZPXzZcLpaeLvfCTWfcTXLrKy6SVd9pMq+dn99uX/DO2mYvGT06gqLVpqn/aOjvrVyq0+Vptr9C9cw/LMQV4ED1GbPcL7mWPU50aR7o/SeDhGZXaM3N3D5O8d5Xuv5Rib5q/hP8M13L4meDo5xPI5Qfz8CK+mhcOKxcupPSyfFcROD5PPplB22tTrEqqq0mw2LV1HkiSq1ap7qahdtQZODVG6LsgFRqhYuWwtKQcEtRvDNG7vZevWfrRd2bnEMH64w4ZhuPwOEVvw82j+JqEHPkKhAKE5L9FIkETyDslLB0idESxN7eND7g2K2mK70UBRFIdOp4Msy45uWHX7alHIhvmYT7CRjVrfirKeiVBYW6SYX2IzGaSyeIGt51doqzJaX6fb7aJpmoOu6/R6PUfbdVv/BJbDHbX3dQ2bAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;with proxy&apos; title=&apos;&apos; src=&apos;/static/dbac84cda5778c5ee7212297a69191ff/ca1dc/with-proxy.png&apos; srcset=&apos;/static/dbac84cda5778c5ee7212297a69191ff/e7570/with-proxy.png 170w,
+/static/dbac84cda5778c5ee7212297a69191ff/f46e7/with-proxy.png 340w,
+/static/dbac84cda5778c5ee7212297a69191ff/ca1dc/with-proxy.png 680w,
+/static/dbac84cda5778c5ee7212297a69191ff/5cfe2/with-proxy.png 1006w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+POJO를 구현한 AOP 프록시 객체가 클라이언트 요청을 받아 foo() 실행 전/후 advice를 실행하는 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🔹 프록시 생성 방식&lt;/strong&gt;&lt;br&gt;
+Spring AOP는 &lt;code class=&quot;language-text&quot;&gt;AnnotationAwareAspectJAutoProxyCreator&lt;/code&gt;라는 &lt;strong&gt;BeanProcessor의&lt;/strong&gt; 구현체를 사용해 AOP 프록시를 생성한다.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/f5827a367374763565460575f8971332/0f09d/post-processor.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 43.529411764705884%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABJ0lEQVR42n2Sh46CUBBF+f//s7tRQKlBRGpAuOZMwi7rliET5rVb5j3HK65Km0xlV2noBz0eD4VhqCzLFMexbreb+r7XMAzquk7P59P+dV2raRqrybZtbY/zkbsKykh+flXXtIqTWOfzWUEQ6HK5GDgkAJRlqaqqlOe5kiQxQt/3rY6iyPY4eotpmkzFOI6WjP8KlBVF8W3OmfT1LUFRgiUSZajE+hyQMQc5+2fiT4UscJCEdbPZaL/f63Q6abfbWZ2mqRHQL9d1zep7ODMybFhg/G6Vmh4dDgcjIOkt5BD8Csji0tLSBvPH49FUkVwErwAwWjPv/xdwGTwHz/NMJWDcPjXWfwDOh1ikd1jn7dEvngXJYRSu12utVittt1ubv9/vRra0/AIjwba74kZrogAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;post processor&apos; title=&apos;&apos; src=&apos;/static/f5827a367374763565460575f8971332/ca1dc/post-processor.png&apos; srcset=&apos;/static/f5827a367374763565460575f8971332/e7570/post-processor.png 170w,
+/static/f5827a367374763565460575f8971332/f46e7/post-processor.png 340w,
+/static/f5827a367374763565460575f8971332/ca1dc/post-processor.png 680w,
+/static/f5827a367374763565460575f8971332/02d09/post-processor.png 1020w,
+/static/f5827a367374763565460575f8971332/9d567/post-processor.png 1360w,
+/static/f5827a367374763565460575f8971332/0f09d/post-processor.png 1652w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+1️⃣ Spring 컨테이너가 Spring 빈을 생성&lt;br&gt;
+2️⃣ &lt;code class=&quot;language-text&quot;&gt;BeanPostProcessor&lt;/code&gt; (&lt;code class=&quot;language-text&quot;&gt;AnnotationAwareAspectJAutoProxyCreator&lt;/code&gt;)가 빈을 감지&lt;br&gt;
+3️⃣ AOP 적용 대상이면 프록시 객체를 생성하여 빈으로 등록&lt;br&gt;
+4️⃣ 클라이언트가 Spring 빈을 호출하면 프록시가 먼저 실행됨&lt;br&gt;
+5️⃣ 프록시가 AOP Advice(Before, After 등)를 실행한 후, 원래 메서드를 실행  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;테스트 코드&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@SpringBootTest&lt;/span&gt;  
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;MyServiceTest&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;  
+  
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@Autowired&lt;/span&gt;  
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;MyService&lt;/span&gt; myService&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+  
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@Test&lt;/span&gt;  
+    &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;testAopProxyType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;  
+        &lt;span class=&quot;token function&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;myService&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getClass&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;MyService&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;  
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;결과&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;필요:com.example.my.MyService
+실제:com.example.my.MyService$$SpringCGLIB$$0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Spring AOP가 적용된 MyService의 빈 객체를 확인해보면, 프록시 객체가 감싸진 것을 확인할 수 있다.&lt;/p&gt;
+&lt;h3 id=&quot;AspectJ-기반-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#AspectJ-%EA%B8%B0%EB%B0%98-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;AspectJ 기반 방식 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;AspectJ 기반 방식&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;✅ &lt;strong&gt;Spring AOP보다 더 강력한 AOP 방식&lt;/strong&gt;&lt;br&gt;
+✅ &lt;strong&gt;컴파일 타임 또는 로드 타임에 바이트코드를 수정하여 AOP 적용&lt;/strong&gt;&lt;br&gt;
+✅ &lt;strong&gt;Spring Bean이 아닌 일반 객체에도 AOP 적용 가능&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-예제&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%98%88%EC%A0%9C&quot; aria-label=&quot; 예제 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;📌 예제&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;🔹 기본적인 Aspect 모듈&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Aspect&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@Component&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@Slf4j&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;LoggingAspect&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// Aspect&lt;/span&gt;
+    
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@AfterReturning&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;execution(* com.example.my..*(..))&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// Pointcut&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;afterMethodExecution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;JoinPoint&lt;/span&gt; joinPoint&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// Advice&lt;/span&gt;
+        log&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;✅ service 실행 완료: &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;🔹 포인트컷 분리&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Aspect&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@Component&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@Slf4j&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;LoggingAspect&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// Aspect&lt;/span&gt;
+
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@Pointcut&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;execution(* com.example.my..*(..))&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// Pointcut&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;myMethods&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;token annotation punctuation&quot;&gt;@AfterReturning&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;myMethods()&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;afterMethodExecution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;JoinPoint&lt;/span&gt; joinPoint&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// Advice&lt;/span&gt;
+        log&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;✅ service 실행 완료: &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot; 참고 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;📌 참고&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.spring.io/spring-framework/reference/core/aop.html&quot;&gt;https://docs.spring.io/spring-framework/reference/core/aop.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Spring 예외 처리]]></title><description><![CDATA[📌 Spring 기본 예외 처리 방식 Spring Boot에서 별도의 핸들링 없이 예외가 발생하면, DispatchServlet이 엔드포인트로 요청을 위임하고, 가 실행되고, 상태 코드 50…]]></description><link>https://choiwonyu.github.io/Spring 예외 처리/</link><guid isPermaLink="false">https://choiwonyu.github.io/Spring 예외 처리/</guid><pubDate>Fri, 28 Feb 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;-Spring-기본-예외-처리-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-Spring-%EA%B8%B0%EB%B3%B8-%EC%98%88%EC%99%B8-%EC%B2%98%EB%A6%AC-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot; Spring 기본 예외 처리 방식 permalink&quot; class=&quot;heading-anchor before&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6.188 8.719c.439-.439.926-.801 1.444-1.087 2.887-1.591 6.589-.745 8.445 2.069l-2.246 2.245c-.644-1.469-2.243-2.305-3.834-1.949-.599.134-1.168.433-1.633.898l-4.304 4.306c-1.307 1.307-1.307 3.433 0 4.74 1.307 1.307 3.433 1.307 4.74 0l1.327-1.327c1.207.479 2.501.67 3.779.575l-2.929 2.929c-2.511 2.511-6.582 2.511-9.093 0s-2.511-6.582 0-9.093l4.304-4.306zm6.836-6.836l-2.929 2.929c1.277-.096 2.572.096 3.779.574l1.326-1.326c1.307-1.307 3.433-1.307 4.74 0 1.307 1.307 1.307 3.433 0 4.74l-4.305 4.305c-1.311 1.311-3.44 1.3-4.74 0-.303-.303-.564-.68-.727-1.051l-2.246 2.245c.236.358.481.667.796.982.812.812 1.846 1.417 3.036 1.704 1.542.371 3.194.166 4.613-.617.518-.286 1.005-.648 1.444-1.087l4.304-4.305c2.512-2.511 2.512-6.582.001-9.093-2.511-2.51-6.581-2.51-9.092 0z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;📌 Spring 기본 예외 처리 방식&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Spring Boot에서 별도의 핸들링 없이 예외가 발생하면, DispatchServlet이 &lt;code class=&quot;language-text&quot;&gt;/error&lt;/code&gt;엔드포인트로 요청을 위임하고, &lt;code class=&quot;language-text&quot;&gt;BasicErrorController&lt;/code&gt;가 실행되고, 상태 코드 500 에러가 발생한다.&lt;/p&gt;
 &lt;p&gt;이때, &lt;code class=&quot;language-text&quot;&gt;BasicErrorController&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;ErrorAttributes&lt;/code&gt;를 이용해 예외 정보를 가져와 JSON 또는 HTML로 응답한다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;BasicErrorController.java&lt;/strong&gt;&lt;/p&gt;
